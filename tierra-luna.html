@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Sistema Solar | Tierra y Luna</title>
+  <meta name="description" content="Página de astronomía de grado quinto: la rotación y la traslación de la Tierra, el día y la noche, las estaciones, las fases de la Luna y los eclipses.">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/tema-cuaderno.css">
+  <style>
+    /* Estilos solo de esta página. Usan los colores del :root
+       para que cambien junto con el diseño que escojamos. */
+    .indice-pagina ul { margin: 0.3rem 0 0; padding-left: 1.2rem; }
+    .escena {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin: 1rem 0;
+      text-align: center;
+    }
+    .escena p { margin: 0.3rem 0 0; font-size: 0.95rem; color: var(--texto-suave); }
+    .flecha-luz { font-size: 2rem; color: var(--acento); }
+  </style>
+</head>
+<body>
+
+  <!-- ===== ENCABEZADO Y MENÚ (es igual en todas las páginas) ===== -->
+  <header class="encabezado">
+    <div class="encabezado-interior">
+      <a class="logo" href="index.html">🪐 El Sistema Solar</a>
+      <nav aria-label="Menú principal">
+        <details class="menu" open>
+          <summary>☰ Menú</summary>
+          <ul>
+            <li><a href="index.html">🏠 Inicio</a></li>
+            <li><a href="sol.html">☀️ El Sol</a></li>
+            <li><a href="planetas.html">🪐 Los planetas</a></li>
+            <li><a href="tamanos.html">📏 Tamaños y distancias</a></li>
+            <li><a href="tierra-luna.html" aria-current="page">🌍 Tierra y Luna</a></li>
+            <li><a href="peso.html">⚖️ ¿Cuánto pesarías?</a></li>
+            <li><a href="leyendas.html">📖 Leyendas</a></li>
+            <li><a href="juega.html">🎮 ¡Juega!</a></li>
+            <li><a href="creditos.html">📚 Glosario y fuentes</a></li>
+          </ul>
+        </details>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== CONTENIDO DE ESTA PÁGINA ===== -->
+  <main>
+    <h1>🌍 La Tierra y la Luna</h1>
+    <p class="intro">
+      La Tierra nunca se queda quieta: gira sobre sí misma y, al mismo tiempo, viaja
+      alrededor del Sol. Además, la Luna da vueltas alrededor de nosotros. Gracias a esos
+      movimientos tenemos días, noches, años, estaciones y fases de la Luna. ¡Les cuento cómo funciona!
+    </p>
+
+    <nav class="tarjeta indice-pagina" aria-label="Contenido de esta página">
+      <strong>📋 En esta página:</strong>
+      <ul>
+        <li><a href="#rotacion">🔄 Rotación: el día y la noche</a></li>
+        <li><a href="#traslacion">☀️ Traslación: el año</a></li>
+        <li><a href="#estaciones">🍂 Las estaciones (y Colombia)</a></li>
+        <li><a href="#luna">🌙 La Luna y sus fases</a></li>
+        <li><a href="#eclipses">🌑 Los eclipses</a></li>
+        <li><a href="#experimento">🔦 Experimento en casa</a></li>
+        <li><a href="#resumen">📝 En resumen</a></li>
+      </ul>
+    </nav>
+
+    <!-- ===== 1. ROTACIÓN ===== -->
+    <h2 id="rotacion">🔄 Rotación: el día y la noche</h2>
+    <p>
+      La Tierra gira sobre sí misma, como un trompo, alrededor de una línea imaginaria
+      que va del polo norte al polo sur. A esa línea la llamamos <strong>eje</strong>.
+      Este movimiento se llama <strong>rotación</strong>, y una vuelta completa dura
+      <strong>unas 24 horas</strong>. ¡Eso es un día!
+    </p>
+    <p>
+      El Sol solo puede iluminar <strong>la mitad</strong> de la Tierra a la vez.
+      En la mitad que mira hacia el Sol es de <strong>día</strong>, y en la otra mitad
+      es de <strong>noche</strong>. Como la Tierra va girando, cada lugar pasa
+      del día a la noche y otra vez al día.
+    </p>
+
+    <div class="escena" role="img" aria-label="Dibujo: a la izquierda el Sol; a la derecha la Tierra, con la mitad que mira al Sol iluminada (día) y la otra mitad oscura (noche).">
+      <div>
+        <span class="planeta-bola" style="width:90px;height:90px;background:radial-gradient(circle at 40% 40%, #fff6b0, #ffcc4d 45%, #ff8c1a 85%);box-shadow:0 0 30px #ffb300;"></span>
+        <p>Sol</p>
+      </div>
+      <span class="flecha-luz" aria-hidden="true">→ → →</span>
+      <div>
+        <span class="planeta-bola" style="width:110px;height:110px;background:linear-gradient(to right, #4aa8ff 0%, #3fbf6a 30%, #2f7fd0 50%, #0d1a3a 50%, #050a1c 100%);"></span>
+        <p>☀️ Día &nbsp;|&nbsp; 🌙 Noche</p>
+      </div>
+    </div>
+
+    <div class="mito">
+      <strong>❌ Idea equivocada:</strong> «El Sol da vueltas alrededor de la Tierra y por eso sale y se oculta».<br>
+      <strong>✅ Lo correcto:</strong> el Sol <strong>parece</strong> moverse por el cielo,
+      pero en realidad somos nosotros los que giramos con la Tierra. Es como cuando vas en
+      un bus y parece que los árboles se mueven.
+    </div>
+
+    <div class="video">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/6kBlgCozIQc?cc_load_policy=1&cc_lang_pref=es&rel=0"
+        title="Video: Rotación y Traslación de la Tierra, de Smile and Learn Español"
+        loading="lazy"
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+    </div>
+    <p class="credito-video">🎬 Video: «Rotación y Traslación de la Tierra - Los movimientos del planeta Tierra», del canal Smile and Learn - Español (YouTube). Lo escogí porque muestra con dibujos los dos movimientos de la Tierra, uno por uno.</p>
+
+    <!-- ===== 2. TRASLACIÓN ===== -->
+    <h2 id="traslacion">☀️ Traslación: el año</h2>
+    <p>
+      Mientras gira sobre sí misma, la Tierra también viaja alrededor del Sol.
+      Este movimiento se llama <strong>traslación</strong>. Una vuelta completa dura
+      <strong>unos 365 días y un cuarto</strong>. ¡Eso es un año!
+    </p>
+
+    <div class="sabias">
+      <strong>💡 ¿Sabías que...?</strong> El calendario tiene 365 días, pero la Tierra se
+      demora un cuartico de día más. Ese pedacito se va sumando, y cuatro cuartos forman un día
+      completo. Por eso, <strong>cada 4 años</strong> le agregamos un día a febrero: el
+      <strong>29 de febrero</strong>. Ese año se llama <strong>año bisiesto</strong> y tiene 366 días.
+    </div>
+
+    <div class="tabla-contenedor">
+      <table>
+        <caption class="credito-video">Los dos movimientos de la Tierra</caption>
+        <thead>
+          <tr><th scope="col">Movimiento</th><th scope="col">¿Qué hace la Tierra?</th><th scope="col">¿Cuánto dura?</th><th scope="col">¿Qué produce?</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>🔄 Rotación</td><td>Gira sobre su eje</td><td>Unas 24 horas</td><td>El día y la noche</td></tr>
+          <tr><td>☀️ Traslación</td><td>Da la vuelta al Sol</td><td>Unos 365 días y un cuarto</td><td>El año (y, con la inclinación, las estaciones)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ===== 3. ESTACIONES ===== -->
+    <h2 id="estaciones">🍂 Las estaciones (y Colombia)</h2>
+    <p>
+      En muchos países hay cuatro estaciones: primavera, verano, otoño e invierno.
+      ¿Por qué pasa eso? Porque el eje de la Tierra está <strong>inclinado</strong>,
+      unos <strong>23 grados y medio</strong> (23,5°). La Tierra viaja alrededor del Sol
+      siempre ladeadita.
+    </p>
+    <p>
+      Debido a esa inclinación, durante una parte del año la mitad norte de la Tierra queda
+      más «de frente» al Sol: los rayos le llegan más directos, los días son más largos y
+      hace calor. Es verano allá. Seis meses después pasa al revés: le toca el verano
+      a la mitad sur y el invierno a la mitad norte.
+    </p>
+
+    <div class="mito">
+      <strong>❌ Idea equivocada:</strong> «Es verano cuando la Tierra está más cerca del Sol,
+      y es invierno cuando está más lejos».<br>
+      <strong>✅ Lo correcto:</strong> las estaciones las causa la <strong>inclinación del eje</strong>,
+      no la distancia. La NASA cuenta que la Tierra está <strong>más cerca del Sol a principios
+      de enero</strong>, ¡y en ese momento en el norte del planeta es invierno! Además, cuando
+      en el norte es verano, en el sur es invierno, aunque toda la Tierra está a la misma
+      distancia del Sol.
+    </div>
+
+    <div class="video">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/soQ5MN0nuMg?cc_load_policy=1&cc_lang_pref=es&rel=0"
+        title="Video: Paxi, el día, la noche y las estaciones, de la Agencia Espacial Europea"
+        loading="lazy"
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+    </div>
+    <p class="credito-video">🎬 Video: «Paxi - El día, la noche y las estaciones», del canal de la Agencia Espacial Europea, ESA (YouTube). Lo escogí porque lo hicieron científicos de verdad y explica muy claro por qué la inclinación causa las estaciones.</p>
+
+    <h3>🇨🇴 ¿Y en Colombia?</h3>
+    <div class="tarjeta">
+      <p>
+        Colombia está muy cerca de la <strong>línea del ecuador</strong>, la línea imaginaria
+        que divide la Tierra en una mitad norte y una mitad sur. Allí los rayos del Sol llegan bastante
+        directos durante todo el año. Por eso aquí <strong>no tenemos cuatro estaciones
+        marcadas</strong> como en Estados Unidos o en España.
+      </p>
+      <p>
+        Lo que sí tenemos son <strong>temporadas de lluvia</strong> y <strong>temporadas
+        secas</strong>. Y otra cosa curiosa: aquí <strong>el día y la noche duran casi lo mismo
+        todo el año</strong>, más o menos 12 horas cada uno. En cambio, en un país lejos del
+        ecuador, en verano puede seguir de día hasta muy tarde.
+      </p>
+      <p>
+        📖 Mucho antes de los telescopios, los pueblos de nuestro territorio también tenían
+        su propia explicación del día y la noche.
+        <a href="leyendas.html">Lee cómo lo explicaban los muiscas →</a>
+      </p>
+      <p>
+        Si en Colombia hace frío o calor depende sobre todo de <strong>la altura</strong>:
+        en Bogotá, que está en la montaña, hace fresco, y en la costa hace calor, ¡en el mismo mes!
+      </p>
+    </div>
+
+    <!-- ===== 4. LA LUNA ===== -->
+    <h2 id="luna">🌙 La Luna y sus fases</h2>
+    <p>
+      La Luna es el <strong>satélite natural</strong> de la Tierra: da vueltas alrededor de
+      nosotros. Está a unos <strong>384.000 kilómetros</strong>. ¡Es como darle la vuelta a la
+      Tierra unas 10 veces!
+    </p>
+
+    <div class="mito">
+      <strong>❌ Idea equivocada:</strong> «La Luna brilla con luz propia, como una lámpara».<br>
+      <strong>✅ Lo correcto:</strong> la Luna <strong>no tiene luz propia</strong>. Lo que vemos
+      es la luz del Sol que rebota en ella, como cuando un espejo refleja la luz de una linterna.
+    </div>
+
+    <p>
+      El Sol siempre ilumina la mitad de la Luna. Pero, a medida que la Luna da vueltas
+      alrededor de la Tierra, nosotros vemos un pedazo más grande o más pequeño de esa mitad
+      iluminada. Esas formas se llaman <strong>fases de la Luna</strong>. Pasar por todas las
+      fases, de una luna nueva a la siguiente, tarda <strong>unos 29 días y medio</strong>,
+      casi un mes.
+    </p>
+
+    <h3>Las cuatro fases principales</h3>
+    <div class="comparador" role="list">
+      <figure role="listitem">
+        <span class="planeta-bola" role="img" aria-label="Luna nueva: casi no se ve, toda oscura" style="width:80px;height:80px;background:#1b2240;border:2px solid var(--borde);"></span>
+        <figcaption>🌑 <strong>Luna nueva</strong><br>Casi no se ve</figcaption>
+      </figure>
+      <figure role="listitem">
+        <span class="planeta-bola" role="img" aria-label="Cuarto creciente: mitad derecha iluminada, como se ve desde el hemisferio norte" style="width:80px;height:80px;background:linear-gradient(to right, #1b2240 50%, #f1efe2 50%);"></span>
+        <figcaption>🌓 <strong>Cuarto creciente</strong><br>Va creciendo</figcaption>
+      </figure>
+      <figure role="listitem">
+        <span class="planeta-bola" role="img" aria-label="Luna llena: toda redonda e iluminada" style="width:80px;height:80px;background:radial-gradient(circle at 40% 40%, #ffffff, #f1efe2 55%, #c9c6b5);"></span>
+        <figcaption>🌕 <strong>Luna llena</strong><br>Toda redonda</figcaption>
+      </figure>
+      <figure role="listitem">
+        <span class="planeta-bola" role="img" aria-label="Cuarto menguante: mitad izquierda iluminada, como se ve desde el hemisferio norte" style="width:80px;height:80px;background:linear-gradient(to right, #f1efe2 50%, #1b2240 50%);"></span>
+        <figcaption>🌗 <strong>Cuarto menguante</strong><br>Va achicándose</figcaption>
+      </figure>
+    </div>
+    <p>
+      Entre esas cuatro hay fases intermedias; por eso, los científicos cuentan
+      <strong>ocho fases</strong> en total.
+    </p>
+
+    <div class="sabias">
+      <strong>💡 ¡Ojo con los dibujos!</strong> Los dibujos de arriba (y los emojis 🌓 🌗) muestran
+      la Luna como se ve desde la mitad <strong>norte</strong> de la Tierra, por ejemplo desde
+      Estados Unidos. Como Colombia está cerca del ecuador, aquí la Luna muchas veces se ve
+      <strong>«acostada»</strong>: la Luna creciente parece una sonrisa o un barquito 🛶 en
+      vez de una letra C o D. ¡Es la misma Luna, solo que la miramos desde otro lugar del planeta!
+    </div>
+
+    <div class="sabias">
+      <strong>💡 ¿Sabías que...?</strong> Desde la Tierra siempre vemos <strong>la misma cara</strong>
+      de la Luna. Ella sí gira sobre sí misma, pero tarda lo mismo en dar una vuelta sobre
+      su eje que en darle la vuelta a la Tierra.
+    </div>
+
+    <div class="mito">
+      <strong>❌ Idea equivocada:</strong> «Las fases pasan porque la sombra de la Tierra tapa a la Luna».<br>
+      <strong>✅ Lo correcto:</strong> las fases dependen de <strong>desde dónde miramos</strong>
+      la parte iluminada de la Luna. La sombra de la Tierra solo cae sobre la Luna en un
+      <strong>eclipse de Luna</strong>, y eso pasa pocas veces.
+    </div>
+
+    <div class="video">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/GBr9wij6-zg?cc_load_policy=1&cc_lang_pref=es&rel=0"
+        title="Video: Fases de la Luna para niños, de Smile and Learn Español"
+        loading="lazy"
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+    </div>
+    <p class="credito-video">🎬 Video: «Fases de la Luna para niños — Luna nueva, creciente, llena y menguante», del canal Smile and Learn - Español (YouTube). Lo escogí porque muestra cómo cambia la parte iluminada de la Luna durante el mes.</p>
+
+    <!-- ===== 5. ECLIPSES ===== -->
+    <h2 id="eclipses">🌑 Los eclipses</h2>
+    <p>
+      Un eclipse ocurre cuando el Sol, la Tierra y la Luna quedan <strong>en fila</strong>.
+      Hay dos clases:
+    </p>
+    <div class="rejilla">
+      <div class="tarjeta">
+        <h3>☀️ Eclipse de Sol</h3>
+        <p>
+          La <strong>Luna se pone entre el Sol y la Tierra</strong> y tapa al Sol. Por unos
+          minutos, en algunos lugares, ¡se oscurece de día! Solo puede pasar en luna nueva.
+        </p>
+        <p class="escena" role="img" aria-label="Orden en un eclipse de Sol: Sol, Luna, Tierra">☀️ → 🌑 → 🌍</p>
+      </div>
+      <div class="tarjeta">
+        <h3>🌕 Eclipse de Luna</h3>
+        <p>
+          La <strong>Tierra se pone entre el Sol y la Luna</strong>, y la sombra de la Tierra
+          cae sobre la Luna. La Luna se ve oscura o rojiza. Solo puede pasar en luna llena.
+        </p>
+        <p class="escena" role="img" aria-label="Orden en un eclipse de Luna: Sol, Tierra, Luna">☀️ → 🌍 → 🌕</p>
+      </div>
+    </div>
+
+    <div class="peligro" role="note" aria-label="Advertencia de seguridad">
+      <strong>⚠️ ¡Muy importante!</strong> <strong>Nunca</strong> mires el Sol directamente,
+      ni siquiera durante un eclipse, ni con gafas de sol normales. Puedes dañarte los ojos
+      para siempre. Se necesitan gafas especiales para eclipses y la ayuda de un adulto.
+    </div>
+
+    <div class="video">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/LORLGccN93Y?cc_load_policy=1&cc_lang_pref=es&rel=0"
+        title="Video: Los Eclipses para niños, de Smile and Learn Español"
+        loading="lazy"
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+    </div>
+    <p class="credito-video">🎬 Video: «Los Eclipses para niños - Eclipse Solar y Eclipse Lunar - ¿Qué es un eclipse?», del canal Smile and Learn - Español (YouTube). Lo escogí porque compara los dos eclipses y muestra en qué orden quedan el Sol, la Tierra y la Luna.</p>
+
+    <!-- ===== 6. EXPERIMENTO ===== -->
+    <h2 id="experimento">🔦 Experimento en casa</h2>
+    <p>
+      Yo hice este experimento en mi casa y entendí todo mucho mejor. ¡Inténtenlo!
+    </p>
+    <div class="rejilla">
+      <div class="tarjeta">
+        <h3>🧰 Materiales</h3>
+        <ul>
+          <li>Una linterna (será el Sol ☀️)</li>
+          <li>Una pelota (será la Tierra 🌍)</li>
+          <li>Una pelota más pequeña o una naranja en un palito (será la Luna 🌙)</li>
+          <li>Una calcomanía o un pedacito de plastilina</li>
+          <li>Un cuarto oscuro y un adulto que ayude</li>
+        </ul>
+      </div>
+      <div class="tarjeta">
+        <h3>🌗 Parte 1: el día y la noche</h3>
+        <ol>
+          <li>Pega la calcomanía en la pelota grande: esa será Colombia.</li>
+          <li>Pide a alguien que alumbre la pelota con la linterna.</li>
+          <li>Mira: solo la mitad de la pelota queda iluminada.</li>
+          <li>Gira la pelota despacio. La calcomanía pasa de la luz (día) a la sombra (noche).</li>
+        </ol>
+      </div>
+      <div class="tarjeta">
+        <h3>🌙 Parte 2: las fases</h3>
+        <ol>
+          <li>Pon la linterna (o una lámpara sin pantalla) en una mesa, apuntando hacia ti.</li>
+          <li>Tu cabeza es la Tierra. Sostén la Luna con el brazo estirado.</li>
+          <li>Da una vuelta despacio sobre ti mismo, mirando siempre la Luna.</li>
+          <li>Verás que la parte iluminada cambia: ¡nueva, creciente, llena y menguante!</li>
+        </ol>
+      </div>
+    </div>
+    <div class="sabias">
+      <strong>💡 Lo que descubrí con el experimento:</strong> la Luna siempre tiene una mitad iluminada,
+      pero, según dónde esté, nosotros vemos más o menos de esa parte. ¡Por eso parece que cambia de forma!
+    </div>
+
+    <!-- ===== 7. CIERRE ===== -->
+    <h2 id="resumen">📝 En resumen</h2>
+    <div class="tarjeta">
+      <p>
+        La Tierra hace dos movimientos: la rotación nos da el día y la noche, y la traslación
+        nos da el año. Las estaciones no dependen de la distancia al Sol, sino de la inclinación
+        del eje; por eso, en Colombia, tan cerca del ecuador, casi no las notamos. Por su parte,
+        la Luna no tiene luz propia y, según desde dónde la miremos, cambia de fase.
+        Lo que más me gustó fue el experimento de la linterna, porque ahí lo vi con mis propios ojos.
+      </p>
+    </div>
+
+    <nav class="navegacion-paginas" aria-label="Páginas siguiente y anterior">
+      <a href="tamanos.html">← Anterior: Tamaños y distancias</a>
+      <a href="peso.html">Siguiente: ¿Cuánto pesarías? →</a>
+    </nav>
+  </main>
+
+  <!-- ===== PIE DE PÁGINA (es igual en todas las páginas) ===== -->
+  <footer>
+    <p>Página hecha por <span class="autor">Eduard Reina</span> · Grado 5° · Castellano · 2026</p>
+    <p><a href="creditos.html">Glosario, fuentes y créditos</a></p>
+  </footer>
+
+  <script src="js/menu.js"></script>
+</body>
+</html>

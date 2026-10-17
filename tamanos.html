@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Sistema Solar | Tamaños y distancias</title>
+  <meta name="description" content="Tamaños y distancias del Sistema Solar para grado quinto: comparador de planetas a escala, regla de distancias en Unidades Astronómicas y un modelo con un balón de fútbol.">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/tema-cuaderno.css">
+  <style>
+    /* Estilos pequeños solo para esta página */
+    .regla-scroll { overflow-x: auto; padding: 0 2.5rem; }
+    .regla-scroll .regla-distancias { min-width: 760px; }
+    .regla-zoom { padding: 0 2.5rem; }
+    /* Nombres de la regla que no caben: solo los lee el lector de pantalla */
+    .marca span.nombre.nombre-oculto {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+    }
+    .nota-escala { color: var(--texto-suave); font-size: 0.95rem; }
+  </style>
+</head>
+<body>
+
+  <!-- ===== ENCABEZADO Y MENÚ (es igual en todas las páginas) ===== -->
+  <header class="encabezado">
+    <div class="encabezado-interior">
+      <a class="logo" href="index.html">🪐 El Sistema Solar</a>
+      <nav aria-label="Menú principal">
+        <details class="menu" open>
+          <summary>☰ Menú</summary>
+          <ul>
+            <li><a href="index.html">🏠 Inicio</a></li>
+            <li><a href="sol.html">☀️ El Sol</a></li>
+            <li><a href="planetas.html">🪐 Los planetas</a></li>
+            <li><a href="tamanos.html" aria-current="page">📏 Tamaños y distancias</a></li>
+            <li><a href="tierra-luna.html">🌍 Tierra y Luna</a></li>
+            <li><a href="peso.html">⚖️ ¿Cuánto pesarías?</a></li>
+            <li><a href="leyendas.html">📖 Leyendas</a></li>
+            <li><a href="juega.html">🎮 ¡Juega!</a></li>
+            <li><a href="creditos.html">📚 Glosario y fuentes</a></li>
+          </ul>
+        </details>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== CONTENIDO DE ESTA PÁGINA ===== -->
+  <main>
+    <h1>📏 Tamaños y distancias</h1>
+    <p class="intro">
+      ¿Qué tan grande es Júpiter? ¿Qué tan lejos queda Neptuno? Aquí les muestro
+      los planetas dibujados <strong>a escala</strong>, o sea, todos achicados
+      con la misma regla, para que se puedan comparar de verdad. Después les explico qué es
+      una <strong>Unidad Astronómica</strong> y, al final, les enseño un modelo del Sistema
+      Solar hecho con un balón de fútbol.
+    </p>
+
+    <h2>¡Ojo! Casi todos los dibujos están mal</h2>
+    <p>
+      En los libros y en los carteles, el Sistema Solar sale con los planetas grandotes y
+      todos juntitos al lado del Sol. Eso se hace para que quepan en la hoja,
+      pero <strong>no está a escala</strong>.
+    </p>
+    <div class="mito">
+      <strong>❌ Idea equivocada:</strong> «Los dibujos del Sistema Solar muestran
+      los tamaños y las distancias de verdad».<br>
+      <strong>✅ Lo correcto:</strong> si dibujaran los planetas del tamaño correcto,
+      quedarían como puntos chiquiticos, y si los pusieran a la distancia correcta,
+      ¡la hoja tendría que medir cientos de metros! El Sistema Solar es casi todo
+      <strong>espacio vacío</strong>.
+    </div>
+
+    <h2>Comparador de tamaños</h2>
+    <p>
+      En este dibujo están los 8 planetas con la misma escala: Júpiter mide 200 píxeles y
+      todos los demás se achican en la misma proporción. Miren lo chiquita que es la Tierra al lado
+      de los gigantes.
+    </p>
+    <div class="comparador" id="comparador">
+      <noscript>
+        <p>
+          Para ver los círculos de los planetas hay que activar JavaScript.
+          Pero no se preocupen: en la tabla de abajo están todos los tamaños.
+        </p>
+      </noscript>
+    </div>
+    <p class="nota-escala" id="nota-sol">
+      ☀️ El Sol no cabe en este dibujo: con esta misma escala mediría unos
+      1.946 píxeles de ancho. ¡Es casi 10 veces más ancho que Júpiter!
+    </p>
+    <p class="nota-escala">
+      Saturno aparece sin sus anillos para comparar solo la bola del planeta.
+    </p>
+
+    <div class="sabias">
+      <strong>💡 ¿Sabías que...?</strong> En el ancho del Sol caben unas
+      <strong>109 Tierras</strong> puestas en fila, una al lado de la otra.
+      Y en el ancho de Júpiter caben unas <strong>11 Tierras</strong>.
+    </div>
+
+    <h3>La tabla de los tamaños y las distancias</h3>
+    <div class="tabla-contenedor">
+      <table>
+        <caption class="solo-lector">Diámetro y distancia al Sol de los 8 planetas</caption>
+        <thead>
+          <tr>
+            <th scope="col">Planeta</th>
+            <th scope="col">Diámetro (km)</th>
+            <th scope="col">¿Cuántas Tierras de ancho?</th>
+            <th scope="col">Distancia al Sol (UA)</th>
+            <th scope="col">Distancia al Sol (millones de km)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Mercurio</th><td>4.879</td><td>menos de la mitad</td><td>0,39</td><td>58</td></tr>
+          <tr><th scope="row">Venus</th><td>12.104</td><td>casi 1</td><td>0,72</td><td>108</td></tr>
+          <tr><th scope="row">Tierra</th><td>12.756</td><td>1</td><td>1</td><td>150</td></tr>
+          <tr><th scope="row">Marte</th><td>6.792</td><td>un poco más de la mitad</td><td>1,52</td><td>228</td></tr>
+          <tr><th scope="row">Júpiter</th><td>142.984</td><td>11</td><td>5,2</td><td>778</td></tr>
+          <tr><th scope="row">Saturno</th><td>120.536</td><td>9 y media</td><td>9,58</td><td>1.430</td></tr>
+          <tr><th scope="row">Urano</th><td>51.118</td><td>4</td><td>19,2</td><td>2.870</td></tr>
+          <tr><th scope="row">Neptuno</th><td>49.528</td><td>casi 4</td><td>30,05</td><td>4.500</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>¿Qué es una Unidad Astronómica?</h2>
+    <p>
+      Las distancias en el espacio son tan grandes que en kilómetros salen números
+      larguísimos. Por eso los astrónomos inventaron una medida especial: la
+      <strong>Unidad Astronómica (UA)</strong>.
+    </p>
+    <p>
+      <strong>1 UA es la distancia de la Tierra al Sol</strong>: unos
+      <strong>150 millones de kilómetros</strong>. Así es más fácil: Júpiter está a
+      5,2 UA, es decir, unas 5 veces más lejos del Sol que nosotros. En cambio, Neptuno
+      está a 30 UA: ¡30 veces más lejos!
+    </p>
+
+    <h2>Regla de distancias</h2>
+    <p>
+      En esta regla cada planeta está puesto según su distancia al Sol en UA.
+      Si está muy ancha para tu pantalla, deslízala de lado. 👉
+    </p>
+    <div class="regla-scroll">
+      <div class="regla-distancias" id="regla-completa" role="group"
+           aria-label="Regla con la distancia de cada planeta al Sol, de 0 a 32 UA"></div>
+    </div>
+    <p class="nota-escala">
+      Los 4 puntitos pegados al Sol son Mercurio, Venus, la Tierra y Marte. ¡Están
+      tan cerquita que no caben los nombres! Por eso abajo les puse una lupa.
+    </p>
+
+    <h3>🔍 Con lupa: los 4 planetas rocosos</h3>
+    <div class="regla-zoom">
+      <div class="regla-distancias" id="regla-zoom" role="group"
+           aria-label="Regla ampliada con la distancia al Sol de Mercurio, Venus, la Tierra y Marte, de 0 a 1,7 UA"></div>
+    </div>
+    <noscript>
+      <p>Las reglas se dibujan con JavaScript. Si está apagado, miren las distancias en la tabla de arriba.</p>
+    </noscript>
+
+    <div class="sabias">
+      <strong>💡 ¿Sabías que...?</strong> La luz es lo más rápido que existe, y aun
+      así la luz del Sol se demora unos <strong>8 minutos</strong> en llegar a la Tierra.
+    </div>
+
+    <h2>Un modelo con cosas de la casa ⚽</h2>
+    <p>
+      Hice un modelo del Sistema Solar con cosas que hay en la casa. Imagínense que
+      el <strong>Sol es un balón de fútbol</strong> de unos <strong>22 cm</strong>.
+    </p>
+    <p>
+      Para achicar todo igual usé <strong>proporciones</strong>, como en matemáticas:
+      el Sol mide 1.391.400 km y en el modelo mide 22 cm. Si divido
+      1.391.400 entre 22, me da que <strong>cada centímetro del modelo son unos
+      63.000 km de verdad</strong>. Después dividí el tamaño y la distancia de cada
+      planeta entre ese mismo número. Por ejemplo, la Tierra mide 12.756 km, y
+      12.756 ÷ 63.000 da más o menos 0,2 cm, es decir, <strong>2 milímetros</strong>.
+    </p>
+    <div class="tabla-contenedor">
+      <table>
+        <caption class="solo-lector">Modelo del Sistema Solar si el Sol fuera un balón de fútbol de 22 cm</caption>
+        <thead>
+          <tr>
+            <th scope="col">Astro</th>
+            <th scope="col">Tamaño en el modelo</th>
+            <th scope="col">Se parece a...</th>
+            <th scope="col">Distancia al balón</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">☀️ Sol</th><td>22 cm</td><td>un balón de fútbol</td><td>—</td></tr>
+          <tr><th scope="row">Mercurio</th><td>casi 1 mm</td><td>un granito de arena</td><td>9 m</td></tr>
+          <tr><th scope="row">Venus</th><td>2 mm</td><td>un grano de pimienta</td><td>17 m</td></tr>
+          <tr><th scope="row">Tierra</th><td>2 mm</td><td>un grano de pimienta o la cabeza de un alfiler</td><td>24 m</td></tr>
+          <tr><th scope="row">Marte</th><td>1 mm</td><td>un grano de sal grueso</td><td>36 m</td></tr>
+          <tr><th scope="row">Júpiter</th><td>2,3 cm</td><td>una uva grande</td><td>123 m</td></tr>
+          <tr><th scope="row">Saturno</th><td>casi 2 cm</td><td>una canica grande</td><td>227 m</td></tr>
+          <tr><th scope="row">Urano</th><td>8 mm</td><td>una arveja</td><td>454 m</td></tr>
+          <tr><th scope="row">Neptuno</th><td>8 mm</td><td>una arveja</td><td>711 m</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      Entonces, si ponen el balón en un arco de la cancha, ¡la Tierra sería un granito
+      de pimienta a <strong>24 metros</strong>! Una cancha de fútbol mide más o menos
+      100 metros de largo, así que Júpiter quedaría después del otro arco. ¡Y Neptuno
+      estaría a unas <strong>7 canchas</strong> de distancia!
+    </p>
+
+    <div class="sabias">
+      <strong>💡 ¿Sabías que...?</strong> En este modelo la Luna sería un puntico de
+      medio milímetro, a solo <strong>6 cm</strong> del grano de pimienta de la Tierra.
+    </div>
+
+    <!-- ===== CIERRE ===== -->
+    <h2>📝 Lo que aprendí</h2>
+    <p>
+      Con esta página aprendí que casi todos los dibujos del Sistema Solar no están a escala.
+      Al dibujar los planetas con la misma regla, descubrí que la Tierra es chiquitica al lado
+      de Júpiter y que el Sol es muchísimo más grande que todos. También entendí que las
+      distancias son tan enormes que los astrónomos usan la Unidad Astronómica. ¡Y lo más
+      sorprendente es que el Sistema Solar es casi todo espacio vacío!
+    </p>
+
+    <nav class="navegacion-paginas" aria-label="Páginas siguiente y anterior">
+      <a href="planetas.html">← Anterior: Los planetas</a>
+      <a href="tierra-luna.html">Siguiente: Tierra y Luna →</a>
+    </nav>
+  </main>
+
+  <!-- ===== PIE DE PÁGINA (es igual en todas las páginas) ===== -->
+  <footer>
+    <p>Página hecha por <span class="autor">Eduard Reina</span> · Grado 5° · Castellano · 2026</p>
+    <p><a href="creditos.html">Glosario, fuentes y créditos</a></p>
+  </footer>
+
+  <script src="js/menu.js"></script>
+  <script src="js/tamanos.js"></script>
+</body>
+</html>

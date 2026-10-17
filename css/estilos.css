@@ -1,0 +1,334 @@
+/* =========================================================
+   ESTILOS DEL SITIO "EL SISTEMA SOLAR"
+   Aquí se decide cómo se ve todo: colores, letras y espacios.
+   El HTML dice QUÉ hay en la página; el CSS dice CÓMO se ve.
+   ========================================================= */
+
+/* --- Colores del sitio (cámbialos aquí y cambian en todas las páginas) --- */
+:root {
+  --fondo: #0b1026;          /* azul muy oscuro, como el cielo de noche */
+  --fondo-tarjeta: #161d3f;  /* un poco más claro, para las cajas */
+  --texto: #f2f4ff;          /* casi blanco, para leer bien */
+  --texto-suave: #c3c9e8;
+  --acento: #ffcc4d;         /* amarillo, como el Sol */
+  --enlace: #8fd3ff;         /* azul claro para los enlaces */
+  --borde: #2c3670;
+  --pendiente: #fff3b0;      /* amarillo claro para lo que falta escribir */
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--texto);
+  background-color: var(--fondo);
+  /* Estrellitas de fondo hechas solo con CSS */
+  background-image:
+    radial-gradient(1px 1px at 20% 30%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 70% 10%, #fff 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 40% 80%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 90% 60%, #fff 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 10% 90%, #fff 50%, transparent 51%);
+  background-size: 300px 300px;
+}
+
+a { color: var(--enlace); }
+a:hover, a:focus { color: var(--acento); }
+
+h1, h2, h3 { line-height: 1.25; }
+h1 { color: var(--acento); font-size: 2.2rem; margin-top: 0.5rem; }
+h2 { color: var(--acento); border-bottom: 2px solid var(--borde); padding-bottom: 0.3rem; }
+
+img { max-width: 100%; height: auto; }
+
+/* --- Encabezado y menú --- */
+.encabezado {
+  background: rgba(11, 16, 38, 0.95);
+  border-bottom: 2px solid var(--borde);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.encabezado-interior {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--acento);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* El menú usa <details>: se abre y se cierra sin JavaScript */
+.menu summary {
+  display: none;            /* en computador no se ve el botón ☰ */
+  cursor: pointer;
+  list-style: none;
+  padding: 0.4rem 0.8rem;
+  border: 2px solid var(--acento);
+  border-radius: 8px;
+  color: var(--acento);
+  font-weight: bold;
+}
+.menu summary::-webkit-details-marker { display: none; }
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.menu a {
+  display: block;
+  padding: 0.4rem 0.7rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--texto);
+  font-size: 1rem;
+}
+.menu a:hover, .menu a:focus { background: var(--fondo-tarjeta); color: var(--acento); }
+
+/* La página en la que estás se marca en amarillo */
+.menu a[aria-current="page"] { background: var(--acento); color: #1a1a1a; font-weight: bold; }
+
+/* En pantallas pequeñas (celular), el menú se vuelve un botón ☰ */
+@media (max-width: 900px) {
+  .menu summary { display: inline-block; }
+  .menu:not([open]) ul { display: none; }
+  .menu[open] ul {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    flex-direction: column;
+    background: var(--fondo);
+    border-bottom: 2px solid var(--borde);
+    padding: 0.5rem 1rem 1rem;
+  }
+  .menu a { font-size: 1.1rem; padding: 0.6rem 0.8rem; }
+}
+/* En computador el menú siempre se ve: js/menu.js lo deja abierto */
+
+/* --- Contenido --- */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 1rem 3rem;
+}
+
+.intro { font-size: 1.25rem; color: var(--texto-suave); }
+
+.tarjeta {
+  background: var(--fondo-tarjeta);
+  border: 1px solid var(--borde);
+  border-radius: 14px;
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+}
+
+.rejilla {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+.rejilla .tarjeta { margin: 0; }
+a.tarjeta { display: block; text-decoration: none; color: var(--texto); }
+a.tarjeta:hover, a.tarjeta:focus { border-color: var(--acento); }
+
+/* Cajas de "¿Sabías que...?" y de "¡Ojo! Idea equivocada" */
+.sabias {
+  border-left: 6px solid var(--acento);
+  background: var(--fondo-tarjeta);
+  padding: 0.8rem 1rem;
+  border-radius: 0 10px 10px 0;
+  margin: 1rem 0;
+}
+.mito {
+  border-left: 6px solid #ff7b7b;
+  background: var(--fondo-tarjeta);
+  padding: 0.8rem 1rem;
+  border-radius: 0 10px 10px 0;
+  margin: 1rem 0;
+}
+
+/* Texto que todavía falta escribir: se ve resaltado para no olvidarlo.
+   Cuando escribas tu texto, borra la clase "pendiente". */
+.pendiente {
+  background: var(--pendiente);
+  color: #3a2f00;
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  border: 2px dashed #b38f00;
+}
+
+/* --- Videos: se ajustan al ancho de la pantalla --- */
+.video {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  aspect-ratio: 16 / 9;
+  margin: 1rem 0;
+}
+.video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 12px;
+}
+.credito-video { font-size: 0.9rem; color: var(--texto-suave); margin-top: -0.5rem; }
+
+/* --- Planetas dibujados con CSS (círculos de colores) --- */
+.planeta-bola {
+  display: inline-block;
+  border-radius: 50%;
+  vertical-align: middle;
+  box-shadow: inset -6px -6px 12px rgba(0, 0, 0, 0.45);
+}
+.sol-bola {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 40%, #fff6b0, #ffcc4d 40%, #ff8c1a 80%);
+  box-shadow: 0 0 60px #ffb300;
+  margin: 1rem auto;
+}
+
+/* Tarjetas de planetas que se abren y se cierran */
+details.planeta {
+  background: var(--fondo-tarjeta);
+  border: 1px solid var(--borde);
+  border-radius: 14px;
+  padding: 0.8rem 1rem;
+}
+details.planeta summary {
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+details.planeta[open] summary { margin-bottom: 0.6rem; color: var(--acento); }
+
+/* --- Tablas --- */
+.tabla-contenedor { overflow-x: auto; position: relative; } /* relative: el texto para lectores no se sale de la caja */
+table { border-collapse: collapse; width: 100%; min-width: 520px; }
+th, td { border: 1px solid var(--borde); padding: 0.5rem 0.7rem; text-align: left; }
+th { background: var(--fondo-tarjeta); color: var(--acento); }
+
+/* --- Formularios: calculadora y quiz --- */
+label { font-weight: bold; }
+input[type="number"], select {
+  font-size: 1.1rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px;
+  border: 2px solid var(--borde);
+  max-width: 100%;
+}
+button {
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 0.6rem 1.2rem;
+  border: 0;
+  border-radius: 10px;
+  background: var(--acento);
+  color: #1a1a1a;
+  cursor: pointer;
+}
+button:hover, button:focus { filter: brightness(1.1); }
+
+.pregunta { margin-bottom: 1.2rem; }
+.pregunta fieldset { border: 1px solid var(--borde); border-radius: 12px; padding: 0.8rem 1rem; }
+.pregunta legend { font-weight: bold; padding: 0 0.4rem; }
+.pregunta label { font-weight: normal; display: block; padding: 0.2rem 0; cursor: pointer; }
+.correcta { color: #7dff9a; font-weight: bold; }
+.incorrecta { color: #ff9b9b; font-weight: bold; }
+
+/* --- Barras de tamaños y distancias --- */
+.comparador {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+.comparador figure { margin: 0; text-align: center; }
+.comparador figcaption { font-size: 0.9rem; margin-top: 0.3rem; }
+
+.regla-distancias {
+  position: relative;
+  height: 90px;
+  margin: 2rem 0 4rem;
+  border-bottom: 3px solid var(--texto-suave);
+}
+.marca {
+  position: absolute;
+  bottom: -6px;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+.marca .punto {
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin: 0 auto 0.2rem;
+  border-radius: 50%;
+}
+/* Los nombres de las marcas pares van abajo, para que no se tapen entre ellos */
+.marca:nth-child(even) span.nombre { position: relative; top: 1.9rem; }
+
+/* Texto que no se ve, pero que sí lee el lector de pantalla (para personas que no ven) */
+.solo-lector {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* Caja de peligro (por ejemplo: no mirar el Sol). Usa colores del tema. */
+.peligro {
+  border: 3px solid var(--acento);
+  background: var(--fondo-tarjeta);
+  border-radius: 14px;
+  padding: 0.8rem 1rem;
+  margin: 1.5rem 0;
+  font-size: 1.1rem;
+}
+
+/* --- Pie de página --- */
+footer {
+  border-top: 2px solid var(--borde);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.95rem;
+  color: var(--texto-suave);
+}
+
+/* Botones "anterior / siguiente" al final de cada página */
+.navegacion-paginas {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2rem;
+}

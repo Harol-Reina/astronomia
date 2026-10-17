@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Sistema Solar | Leyendas del cielo</title>
+  <meta name="description" content="Leyendas muisca y wayuu sobre el Sol, la Luna y la lluvia, comparadas con lo que dice la ciencia, y una línea de tiempo de la astronomía en Colombia.">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/tema-cuaderno.css">
+  <style>
+    /* Fuentes al pie de cada leyenda: letra más pequeña y suave */
+    .fuentes { font-size: 0.95rem; color: var(--texto-suave); }
+    .fuentes ul { margin: 0.3rem 0 0; padding-left: 1.2rem; }
+
+    /* Línea de tiempo: una raya vertical con puntos amarillos */
+    .linea-tiempo { list-style: none; margin: 1rem 0; padding: 0 0 0 1.5rem; border-left: 3px solid var(--borde); }
+    .linea-tiempo li { position: relative; margin-bottom: 1.2rem; }
+    .linea-tiempo li::before {
+      content: "";
+      position: absolute;
+      left: calc(-1.5rem - 9px);
+      top: 0.45rem;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: var(--acento);
+    }
+    .linea-tiempo .fecha { color: var(--acento); font-weight: bold; display: block; }
+  </style>
+</head>
+<body>
+
+  <!-- ===== ENCABEZADO Y MENÚ (es igual en todas las páginas) ===== -->
+  <header class="encabezado">
+    <div class="encabezado-interior">
+      <a class="logo" href="index.html">🪐 El Sistema Solar</a>
+      <nav aria-label="Menú principal">
+        <details class="menu" open>
+          <summary>☰ Menú</summary>
+          <ul>
+            <li><a href="index.html">🏠 Inicio</a></li>
+            <li><a href="sol.html">☀️ El Sol</a></li>
+            <li><a href="planetas.html">🪐 Los planetas</a></li>
+            <li><a href="tamanos.html">📏 Tamaños y distancias</a></li>
+            <li><a href="tierra-luna.html">🌍 Tierra y Luna</a></li>
+            <li><a href="peso.html">⚖️ ¿Cuánto pesarías?</a></li>
+            <li><a href="leyendas.html" aria-current="page">📖 Leyendas</a></li>
+            <li><a href="juega.html">🎮 ¡Juega!</a></li>
+            <li><a href="creditos.html">📚 Glosario y fuentes</a></li>
+          </ul>
+        </details>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== CONTENIDO DE ESTA PÁGINA ===== -->
+  <main>
+    <h1>📖 Leyendas del cielo colombiano</h1>
+
+    <!-- INTRODUCCIÓN -->
+    <p class="intro">
+      Hace mucho tiempo no había telescopios ni cohetes. Pero la gente miraba el cielo
+      todas las noches y se hacía preguntas: ¿de dónde salió el Sol?, ¿por qué la Luna
+      sale de noche?, ¿quién manda la lluvia? Para responder, los pueblos crearon
+      historias que pasaban de los abuelos a los nietos.
+    </p>
+    <p>
+      En esta página les cuento dos leyendas de pueblos indígenas de Colombia: una del
+      pueblo <strong>muisca</strong> y otra del pueblo <strong>wayuu</strong>. Después las
+      comparo con lo que dice la ciencia.
+    </p>
+
+    <div class="sabias">
+      <strong>💡 Un mito no es una mentira.</strong>
+      Es la forma en que una cultura explica el mundo. Los mitos nos cuentan qué era
+      importante para un pueblo, qué respetaba y cómo entendía la naturaleza. La ciencia
+      explica el cielo de otra manera, con observaciones y pruebas. Las dos cosas nos
+      enseñan algo.<br>
+      Estas historias son <strong>mitos</strong>, porque explican cómo nacieron el Sol y la
+      Luna o de dónde viene la lluvia. Mucha gente también las llama <strong>leyendas</strong>,
+      y por eso uso las dos palabras.
+    </div>
+
+    <!-- DESARROLLO 1: LEYENDA MUISCA -->
+    <h2>☀️🌙 Leyenda muisca: cómo nacieron el Sol y la Luna</h2>
+    <p>
+      El pueblo muisca vive desde hace muchos siglos en las montañas del centro de Colombia,
+      donde hoy están Boyacá y Cundinamarca. Esta es la leyenda contada con mis palabras.
+    </p>
+
+    <div class="tarjeta">
+      <h3>Inicio</h3>
+      <p>
+        Al principio el mundo estaba completamente a oscuras. No había Sol ni Luna.
+        Solo existían dos caciques: el cacique de <strong>Sogamoso</strong> y el cacique
+        de <strong>Ramiriquí</strong>. Ellos formaron a los primeros hombres y a las
+        primeras mujeres.
+      </p>
+
+      <h3>Nudo</h3>
+      <p>
+        Pero había un problema muy grande: la gente vivía en la oscuridad y no podía ver
+        nada. ¿Cómo iban a trabajar, caminar o sembrar sin luz? Entonces los dos caciques
+        decidieron hacer algo valiente. Primero, el cacique de Ramiriquí subió al cielo y
+        se convirtió en el <strong>Sol</strong>. ¡Por fin hubo luz de día!
+      </p>
+      <p>
+        Sin embargo, cuando el Sol se iba, la noche seguía siendo muy oscura. Por eso,
+        después, el cacique de Sogamoso también subió al cielo y se convirtió en la
+        <strong>Luna</strong>.
+      </p>
+
+      <h3>Desenlace</h3>
+      <p>
+        Desde entonces el Sol alumbra el día y la Luna alumbra la noche. Para recordar
+        lo que hicieron los caciques, los muiscas de Sogamoso celebraban en diciembre una
+        fiesta llamada <em>Huan</em>.
+      </p>
+    </div>
+
+    <div class="sabias">
+      <strong>📝 Nota:</strong> esta leyenda tiene versiones distintas. En algunas, el
+      cacique de Ramiriquí es sobrino del de Sogamoso, y en otras es el de Sogamoso quien
+      le pide que suba primero. Yo usé la versión que escribió el cronista fray Pedro Simón.
+      Además, los relatos muiscas que conocemos <strong>no los escribieron los muiscas</strong>:
+      los escribieron cronistas españoles. Por eso el <strong>autor</strong> del texto (el
+      cronista español) no pertenece al pueblo que contaba la historia.
+    </div>
+
+    <h3>🏛️ El Templo del Sol de Sogamoso</h3>
+    <p>
+      Sogamoso (los muiscas la llamaban <em>Sugamuxi</em>) era una ciudad sagrada. Allí
+      estaba el <strong>Templo del Sol</strong>, uno de los lugares más importantes para
+      los muiscas. Según los cronistas, unos soldados españoles lo incendiaron por
+      accidente en 1537. Hoy se puede visitar una reconstrucción en el Museo Arqueológico
+      de Sogamoso.
+    </p>
+
+    <h3>📅 El calendario muisca</h3>
+    <p>
+      Los muiscas observaban con mucho cuidado el cielo. Tenían un
+      <strong>calendario</strong> basado en los ciclos de la Luna y del Sol. Lo usaban
+      para saber cuándo sembrar y cuándo cosechar. ¡Eran astrónomos de verdad!
+    </p>
+
+    <div class="fuentes">
+      <strong>Fuentes de la leyenda muisca:</strong>
+      <ul>
+        <li>Simón, fray Pedro. (siglo XVII). <em>Noticias historiales</em>.</li>
+        <li>Izquierdo Peña, M. A. (2008). <em>The Muisca Calendar</em>. <a href="https://arxiv.org/pdf/0812.0574">arxiv.org/pdf/0812.0574</a></li>
+        <li>Museo del Oro, Banco de la República. Sala «Cosmología y simbolismo». <a href="https://www.banrepcultural.org/bogota/museo-del-oro">banrepcultural.org/bogota/museo-del-oro</a></li>
+      </ul>
+    </div>
+
+    <!-- DESARROLLO 2: LEYENDA WAYUU -->
+    <h2>🌧️ Leyenda wayuu: Juyá, la lluvia</h2>
+    <p>
+      El pueblo wayuu vive en La Guajira, en el norte de Colombia, donde casi siempre hace
+      calor y llueve poco. Por eso la lluvia es muy valiosa para ellos. Su lengua se llama
+      <em>wayuunaiki</em>.
+    </p>
+
+    <div class="tarjeta">
+      <h3>Inicio</h3>
+      <p>
+        En wayuunaiki, <strong>Juyá</strong> quiere decir «lluvia». Pero para los wayuu,
+        Juyá también es un ser muy poderoso: un cazador que viaja por el cielo.
+      </p>
+
+      <h3>Nudo</h3>
+      <p>
+        Juyá tiene una esposa llamada <strong>Pulowi</strong>. Ella es una mujer misteriosa
+        que vive debajo de la tierra y en los lugares solitarios. Pulowi es la dueña de los
+        animales salvajes y está relacionada con la <strong>sequía</strong>, es decir, con
+        el tiempo en que no llueve.
+      </p>
+
+      <h3>Desenlace</h3>
+      <p>
+        Cuando Juyá llega con la lluvia, la tierra (a la que los wayuu llaman
+        <em>Mma</em>, la madre tierra) se moja y de ella nacen el agua, las plantas y la
+        comida. Así, Juyá y Pulowi representan el equilibrio entre la lluvia y la tierra
+        seca.
+      </p>
+    </div>
+
+    <div class="sabias">
+      <strong>🔭 ¿Sabías que Juyá está en el Sistema Solar?</strong>
+      Muy lejos, más allá de Neptuno, en el <strong>Cinturón de Kuiper</strong>, hay un
+      objeto helado llamado <strong>(38628) Huya</strong>. «Huya» es como se escribe
+      Juyá en inglés. Lo descubrieron en el año <strong>2000</strong> desde un
+      observatorio de Venezuela, y su nombre se aprobó en <strong>2003</strong>, para honrar a los pueblos indígenas de la región.
+      Mide unos <strong>400 km</strong> de ancho. ¡Una leyenda wayuu tiene su nombre en
+      el espacio!
+    </div>
+
+    <div class="fuentes">
+      <strong>Fuentes de la leyenda wayuu:</strong>
+      <ul>
+        <li>Radio Nacional de Colombia. «Juyá, el dios de la lluvia para los wayuu». <a href="https://radionacional.co/cultura/tradiciones/juya-el-dios-de-la-lluvia-para-los-wayuu">radionacional.co</a></li>
+        <li>Perrin, M. (1980). <em>El camino de los indios muertos: mitos y símbolos guajiros</em>. Monte Ávila.</li>
+        <li>Boletín Museo del Oro, Banco de la República. Artículo sobre cosmología wayuu. <a href="https://publicaciones.banrepcultural.org/index.php/bmo/article/download/7252/7516/14728">publicaciones.banrepcultural.org</a></li>
+        <li>Wikipedia. «38628 Huya». <a href="https://en.wikipedia.org/wiki/38628_Huya">en.wikipedia.org/wiki/38628_Huya</a></li>
+      </ul>
+    </div>
+
+    <!-- DESARROLLO 3: TABLA LEYENDA / CIENCIA -->
+    <h2>⚖️ Lo que dice la leyenda y lo que dice la ciencia</h2>
+    <p>
+      Las leyendas y la ciencia hablan de las mismas cosas del cielo, pero las explican
+      de forma diferente. Miren esta tabla:
+    </p>
+
+    <div class="tabla-contenedor">
+      <table>
+        <caption class="solo-lector">Comparación entre lo que dicen las leyendas y lo que dice la ciencia</caption>
+        <thead>
+          <tr>
+            <th scope="col">Tema</th>
+            <th scope="col">📖 Lo que dice la leyenda</th>
+            <th scope="col">🔬 Lo que dice la ciencia</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">El día y la noche</th>
+            <td>El cacique de Ramiriquí se convirtió en el Sol para alumbrar el día (muisca).</td>
+            <td>El Sol es una estrella. Hay día y noche porque la Tierra gira sobre sí misma: ese movimiento se llama <strong>rotación</strong> y dura unas 24 horas.</td>
+          </tr>
+          <tr>
+            <th scope="row">La Luna</th>
+            <td>El cacique de Sogamoso se convirtió en la Luna para alumbrar la noche (muisca).</td>
+            <td>La Luna es el <strong>satélite</strong> natural de la Tierra. No tiene luz propia: brilla porque refleja la luz del Sol.</td>
+          </tr>
+          <tr>
+            <th scope="row">La lluvia</th>
+            <td>Juyá, el cazador del cielo, trae la lluvia y hace nacer las plantas (wayuu).</td>
+            <td>El calor del Sol evapora el agua de mares y ríos. El vapor sube, forma nubes y, cuando se enfría, cae como lluvia. Es el <strong>ciclo del agua</strong>.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      ¿En qué se parecen? Las dos explicaciones dicen que el Sol nos da la luz del día y
+      que la lluvia es importante para la vida. ¿En qué se diferencian? La leyenda usa
+      personajes y la ciencia usa observaciones y medidas.
+    </p>
+
+    <!-- DESARROLLO 4: LÍNEA DE TIEMPO -->
+    <h2>🕰️ La astronomía en Colombia</h2>
+    <p>En Colombia se ha mirado el cielo desde hace muchísimo tiempo:</p>
+
+    <ol class="linea-tiempo">
+      <li>
+        <span class="fecha">Antes de 1537</span>
+        Los muiscas usan su calendario de la Luna y del Sol para sembrar, y adoran al Sol
+        en el Templo del Sol de Sogamoso.
+      </li>
+      <li>
+        <span class="fecha">1803</span>
+        Se termina en Bogotá el <strong>Observatorio Astronómico Nacional</strong>. Lo
+        impulsó el sabio José Celestino Mutis y lo construyó fray Domingo de Petrés.
+        Francisco José de Caldas fue su primer director.
+      </li>
+      <li>
+        <span class="fecha">22 de diciembre de 1969</span>
+        Se inaugura el <strong>Planetario de Bogotá</strong>. ¡Su proyector de estrellas
+        se pagó en parte con café colombiano!
+      </li>
+      <li>
+        <span class="fecha">2000 y 2003</span>
+        Desde un observatorio de Venezuela descubren un objeto helado del Cinturón de Kuiper.
+        En 2003 recibe el nombre de <strong>Huya</strong>, por Juyá, la lluvia del pueblo
+        wayuu, que vive en La Guajira de Colombia y de Venezuela.
+      </li>
+    </ol>
+
+    <div class="fuentes">
+      <strong>Fuentes de la línea de tiempo:</strong>
+      <ul>
+        <li>Sociedad Geográfica de Colombia. Reseña histórica del Observatorio Astronómico Nacional. <a href="https://sogeocol.edu.co/documentos/004_01_rese_hist_obser_astr.pdf">sogeocol.edu.co</a></li>
+        <li>EcuRed. «Observatorio Astronómico Nacional». <a href="https://www.ecured.cu/Observatorio_Astron%C3%B3mico_Nacional">ecured.cu</a></li>
+        <li>El Tiempo. «El Planetario de Bogotá celebra sus 50 años». <a href="https://www.eltiempo.com/bogota/el-planetario-de-bogota-celebra-sus-50-anos-359594">eltiempo.com</a></li>
+        <li>Wikipedia. «38628 Huya». <a href="https://en.wikipedia.org/wiki/38628_Huya">en.wikipedia.org</a></li>
+        <li>Wikipedia. «Planetarium of Bogotá». <a href="https://en.wikipedia.org/wiki/Planetarium_of_Bogot%C3%A1">en.wikipedia.org</a></li>
+      </ul>
+    </div>
+
+    <!-- CIERRE -->
+    <h2>🌟 ¿Qué aprendí?</h2>
+    <p>
+      Aprendí que los pueblos indígenas de Colombia miraban el cielo con mucha atención,
+      mucho antes de que llegaran los telescopios. Con sus leyendas explicaban el día, la
+      noche y la lluvia. También aprendí que un mito no es una mentira, sino otra manera
+      de entender el mundo.
+    </p>
+    <p>
+      Lo más importante es que los pueblos <strong>muisca</strong> y
+      <strong>wayuu</strong> no son cosa del pasado: <strong>siguen vivos hoy</strong>.
+      Hay comunidades muiscas en Suba, Bosa, Cota, Chía y Sesquilé, y el pueblo wayuu vive
+      en La Guajira. Por eso debemos respetar sus historias y su cultura, y siempre decir
+      de qué pueblo viene cada leyenda.
+    </p>
+
+    <nav class="navegacion-paginas" aria-label="Páginas siguiente y anterior">
+      <a href="peso.html">← Anterior: ¿Cuánto pesarías?</a>
+      <a href="juega.html">Siguiente: ¡Juega! →</a>
+    </nav>
+  </main>
+
+  <!-- ===== PIE DE PÁGINA (es igual en todas las páginas) ===== -->
+  <footer>
+    <p>Página hecha por <span class="autor">Eduard Reina</span> · Grado 5° · Castellano · 2026</p>
+    <p><a href="creditos.html">Glosario, fuentes y créditos</a></p>
+  </footer>
+
+  <script src="js/menu.js"></script>
+</body>
+</html>

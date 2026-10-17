@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Sistema Solar | Los planetas</title>
+  <meta name="description" content="Fichas de los 8 planetas del Sistema Solar (rocosos, gigantes gaseosos y gigantes helados), tabla comparativa y otros vecinos: planetas enanos, asteroides y cometas.">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/tema-cuaderno.css">
+  <style>
+    /* Estilos pequeños solo para esta página */
+    /* Las fichas de planetas quedan una debajo de la otra con espacio */
+    .grupo-planetas details.planeta { margin: 0 0 0.8rem; }
+    .grupo-planetas details.planeta ul { margin: 0.2rem 0 0.4rem; padding-left: 1.3rem; }
+    .grupo-planetas details.planeta li { margin-bottom: 0.3rem; }
+    /* La etiqueta pequeña que dice el tipo de planeta */
+    .tipo-planeta { font-size: 0.95rem; font-weight: normal; color: var(--texto-suave); }
+    /* El anillo de Saturno: un óvalo alrededor de la bolita */
+    .con-anillo { position: relative; }
+    .con-anillo::after {
+      content: "";
+      position: absolute;
+      left: -35%;
+      right: -35%;
+      top: 38%;
+      height: 24%;
+      border: 3px solid var(--acento);
+      border-radius: 50%;
+      transform: rotate(-15deg);
+    }
+    /* Los números de la tabla quedan alineados a la derecha */
+    td.numero { text-align: right; white-space: nowrap; }
+  </style>
+</head>
+<body>
+
+  <!-- ===== ENCABEZADO Y MENÚ (es igual en todas las páginas) ===== -->
+  <header class="encabezado">
+    <div class="encabezado-interior">
+      <a class="logo" href="index.html">🪐 El Sistema Solar</a>
+      <nav aria-label="Menú principal">
+        <details class="menu" open>
+          <summary>☰ Menú</summary>
+          <ul>
+            <li><a href="index.html">🏠 Inicio</a></li>
+            <li><a href="sol.html">☀️ El Sol</a></li>
+            <li><a href="planetas.html" aria-current="page">🪐 Los planetas</a></li>
+            <li><a href="tamanos.html">📏 Tamaños y distancias</a></li>
+            <li><a href="tierra-luna.html">🌍 Tierra y Luna</a></li>
+            <li><a href="peso.html">⚖️ ¿Cuánto pesarías?</a></li>
+            <li><a href="leyendas.html">📖 Leyendas</a></li>
+            <li><a href="juega.html">🎮 ¡Juega!</a></li>
+            <li><a href="creditos.html">📚 Glosario y fuentes</a></li>
+          </ul>
+        </details>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== CONTENIDO DE ESTA PÁGINA ===== -->
+  <main>
+    <h1>🪐 Los planetas</h1>
+    <p class="intro">
+      En el Sistema Solar hay <strong>8 planetas</strong>. Yo los separé en tres grupos:
+      los <strong>rocosos</strong>, los <strong>gigantes gaseosos</strong> y los
+      <strong>gigantes helados</strong>. Después los comparo en una tabla y, al final, te
+      presento otros vecinos del Sistema Solar. Toca el nombre de cada planeta para abrir su
+      ficha. ¡Cada uno tiene algo especial!
+    </p>
+
+    <div class="sabias">
+      <strong>💡 Ojo con los dibujos:</strong> las bolitas de colores de esta página
+      <strong>no están a escala</strong>. Si estuvieran a escala, Júpiter sería enorme y
+      Mercurio sería un puntico casi invisible. Eso lo explico en
+      <a href="tamanos.html">Tamaños y distancias</a>.
+    </div>
+
+    <!-- ===== GRUPO 1: PLANETAS ROCOSOS ===== -->
+    <h2>🪨 Los planetas rocosos</h2>
+    <p>
+      Son los cuatro más cercanos al Sol: <strong>Mercurio, Venus, la Tierra y Marte</strong>.
+      También se llaman <strong>planetas terrestres</strong>, porque se parecen a la Tierra:
+      tienen suelo duro de roca y metal, donde podrías pararte. Además, son pequeños comparados con los gigantes.
+    </p>
+
+    <div class="grupo-planetas">
+      <details class="planeta">
+        <summary>
+          <span class="planeta-bola" style="width:34px;height:34px;background:radial-gradient(circle at 35% 35%, #d9d4cc, #9a948c 60%, #6b665f);" role="img" aria-label="Dibujo de Mercurio: bolita gris"></span>
+          Mercurio <span class="tipo-planeta">· rocoso · 1.º desde el Sol</span>
+        </summary>
+        <ul>
+          <li>Es el planeta <strong>más cercano al Sol</strong> y el <strong>más pequeño</strong> de los ocho. Es apenas un poco más grande que nuestra Luna.</li>
+          <li>Es el <strong>más rápido</strong>: le da la vuelta al Sol en solo <strong>88 días</strong>. ¡Allá un año es más corto que tres meses de aquí!</li>
+          <li>Casi no tiene aire que guarde el calor. Por eso de día hace muchísimo calor (más de 400 °C) y de noche, muchísimo frío (más de 170 °C bajo cero).</li>
+          <li>Está lleno de <strong>cráteres</strong>, como la Luna, y <strong>no tiene lunas</strong>.</li>
+        </ul>
+      </details>
+
+      <details class="planeta">
+        <summary>
+          <span class="planeta-bola" style="width:44px;height:44px;background:radial-gradient(circle at 35% 35%, #fff1c9, #e8c27a 55%, #b8893d);" role="img" aria-label="Dibujo de Venus: bolita amarilla clara"></span>
+          Venus <span class="tipo-planeta">· rocoso · 2.º desde el Sol</span>
+        </summary>
+        <ul>
+          <li>Es el planeta <strong>más caliente</strong> del Sistema Solar, ¡aunque Mercurio está más cerca del Sol! Su suelo pasa de los <strong>450 °C</strong>, tanto que se derretiría el plomo.</li>
+          <li>¿Por qué? Porque tiene una capa de aire muy gruesa, con nubes que <strong>atrapan el calor</strong> como una cobija.</li>
+          <li>Gira <strong>al revés</strong> de casi todos los demás planetas, y muy despacio: un giro le toma <strong>243 días</strong>. Su día es más largo que su año.</li>
+          <li>Tiene casi el mismo tamaño que la Tierra; por eso le dicen el «planeta gemelo». Sin embargo, allá no podríamos vivir.</li>
+          <li>Después del Sol y la Luna, es el puntito más brillante del cielo. Lo puedes ver al atardecer o al amanecer.</li>
+        </ul>
+      </details>
+
+      <details class="planeta">
+        <summary>
+          <span class="planeta-bola" style="width:46px;height:46px;background:radial-gradient(circle at 35% 35%, #9fe0ff, #2f7fd6 50%, #2e8b57 70%, #1b4f8a);" role="img" aria-label="Dibujo de la Tierra: bolita azul con verde"></span>
+          La Tierra <span class="tipo-planeta">· rocoso · 3.º desde el Sol</span>
+        </summary>
+        <ul>
+          <li>¡Es nuestra casa! Es el <strong>único planeta donde sabemos que hay vida</strong>.</li>
+          <li>Además, es el único que tiene <strong>agua líquida en la superficie</strong>: océanos, ríos y lagos. Casi tres cuartas partes de la Tierra están cubiertas de agua.</li>
+          <li>Tiene <strong>una sola luna</strong>: la Luna.</li>
+          <li>Un giro sobre sí misma dura <strong>24 horas</strong> (un día) y una vuelta al Sol dura <strong>365 días</strong> (un año).</li>
+          <li>Su aire (la <strong>atmósfera</strong>) nos deja respirar y nos protege de muchas rocas del espacio, que se queman antes de llegar al suelo.</li>
+        </ul>
+      </details>
+
+      <details class="planeta">
+        <summary>
+          <span class="planeta-bola" style="width:38px;height:38px;background:radial-gradient(circle at 35% 35%, #ffb38a, #d2552b 55%, #8a2f12);" role="img" aria-label="Dibujo de Marte: bolita roja"></span>
+          Marte <span class="tipo-planeta">· rocoso · 4.º desde el Sol</span>
+        </summary>
+        <ul>
+          <li>Es el <strong>planeta rojo</strong>. Su suelo tiene mucho <strong>óxido de hierro</strong>, que es como el óxido de una puntilla vieja. ¡Por eso se ve rojizo!</li>
+          <li>Ahí está el <strong>volcán más grande del Sistema Solar</strong>, el monte Olimpo. Es como tres veces más alto que el monte Everest.</li>
+          <li>Tiene <strong>dos lunas pequeñitas</strong>: Fobos y Deimos.</li>
+          <li>Su día dura casi lo mismo que el nuestro: unas <strong>24 horas y media</strong>. Pero su año dura casi <strong>2 años</strong> de la Tierra.</li>
+          <li>Allá hay robots de la NASA explorando, como el róver <strong>Perseverance</strong>.</li>
+        </ul>
+      </details>
+    </div>
+
+    <div class="video">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/yMca5uUX4qQ?cc_load_policy=1&cc_lang_pref=es&rel=0"
+        title="Video: Planetas terrestres, El Sistema Solar para niños, de Smile and Learn"
+        loading="lazy"
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+    </div>
+    <p class="credito-video">🎬 Video: «Planetas terrestres | El Sistema Solar para niños», del canal Smile and Learn - Español (YouTube). Lo escogí porque explica en poco tiempo cómo son los cuatro planetas rocosos, con dibujos claros y subtítulos en español.</p>
+
+    <!-- ===== GRUPO 2: GIGANTES GASEOSOS ===== -->
+    <h2>🌪️ Los gigantes gaseosos</h2>
+    <p>
+      Son <strong>Júpiter y Saturno</strong>, dos planetas enormes hechos sobre todo de
+      <strong>gases</strong> (hidrógeno y helio). <strong>No tienen suelo</strong>: si una nave
+      intentara aterrizar, se iría hundiendo entre nubes cada vez más espesas.
+      Los dos tienen <strong>muchísimas lunas</strong>, ¡decenas cada uno!
+    </p>
+
+    <div class="grupo-planetas">
+      <details class="planeta">
+        <summary>
+          <span class="planeta-bola" style="width:64px;height:64px;background:linear-gradient(180deg, #e9d7b8 0%, #c9a27a 18%, #f1e3c8 30%, #b5835a 45%, #efdcbc 58%, #c48a5c 72%, #e8d3b0 86%, #a8754d 100%);" role="img" aria-label="Dibujo de Júpiter: bola grande con rayas cafés y crema"></span>
+          Júpiter <span class="tipo-planeta">· gigante gaseoso · 5.º desde el Sol</span>
+        </summary>
+        <ul>
+          <li>Es el planeta <strong>más grande</strong> de todos. Dentro de Júpiter cabrían <strong>más de 1.000 Tierras</strong>.</li>
+          <li>Tiene la <strong>Gran Mancha Roja</strong>: una tormenta gigante, <strong>más grande que toda la Tierra</strong>, que lleva soplando cientos de años.</li>
+          <li>Es el que <strong>gira más rápido</strong>: su día dura solo unas <strong>10 horas</strong>.</li>
+          <li>Tiene <strong>muchísimas lunas</strong>. Una de ellas, Ganímedes, es la luna más grande del Sistema Solar, ¡más grande que Mercurio!</li>
+        </ul>
+      </details>
+
+      <details class="planeta">
+        <summary>
+          <span class="planeta-bola con-anillo" style="width:56px;height:56px;background:radial-gradient(circle at 35% 35%, #fff4d1, #e3c27f 55%, #a98443);" role="img" aria-label="Dibujo de Saturno: bola amarilla clara con un anillo"></span>
+          Saturno <span class="tipo-planeta">· gigante gaseoso · 6.º desde el Sol</span>
+        </summary>
+        <ul>
+          <li>Es famoso por sus <strong>anillos</strong>, los más grandes y bonitos del Sistema Solar.</li>
+          <li>Los anillos no son sólidos: están hechos de <strong>millones de pedazos de hielo y roca</strong>. Algunos son chiquitos como granos de arena y otros grandes como una casa.</li>
+          <li>Es el <strong>segundo planeta más grande</strong>, después de Júpiter.</li>
+          <li>También tiene <strong>muchísimas lunas</strong>. La más grande, Titán, tiene ríos y lagos, ¡pero no de agua sino de metano!</li>
+          <li>Júpiter, Urano y Neptuno también tienen anillos, pero son mucho más delgaditos y oscuros.</li>
+        </ul>
+      </details>
+    </div>
+
+    <div class="video">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/iOlyf8w3CjI?cc_load_policy=1&cc_lang_pref=es&rel=0"
+        title="Video: Planetas gaseosos, El Sistema Solar para niños, de Smile and Learn"
+        loading="lazy"
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+    </div>
+    <p class="credito-video">🎬 Video: «Planetas gaseosos - El Sistema Solar para niños», del canal Smile and Learn - Español (YouTube). Lo escogí porque muestra muy bien por qué Júpiter y Saturno no tienen suelo y cómo son los anillos de Saturno.</p>
+
+    <div class="mito">
+      <strong>❌ Idea equivocada:</strong> «Solo Saturno tiene anillos».<br>
+      <strong>✅ Lo correcto:</strong> los <strong>cuatro gigantes</strong> (Júpiter, Saturno,
+      Urano y Neptuno) tienen anillos. Lo que pasa es que los de Saturno son los más grandes
+      y brillantes, y por eso son los únicos que se ven fácilmente con un telescopio pequeño.
+    </div>
+
+    <!-- ===== GRUPO 3: GIGANTES HELADOS ===== -->
+    <h2>🧊 Los gigantes helados</h2>
+    <p>
+      Son <strong>Urano y Neptuno</strong>, los más lejanos del Sol. Aunque son grandes, no lo
+      son tanto como Júpiter y Saturno. Por dentro tienen mucha agua, amoníaco y metano muy fríos
+      (los científicos les dicen «hielos»). El <strong>metano</strong> de su aire es lo que los
+      hace verse <strong>azules</strong>.
+    </p>
+
+    <div class="grupo-planetas">
+      <details class="planeta">
+        <summary>
+          <span class="planeta-bola" style="width:50px;height:50px;background:radial-gradient(circle at 35% 35%, #e6ffff, #8fdbe0 55%, #4a9fa8);" role="img" aria-label="Dibujo de Urano: bola azul verdosa"></span>
+          Urano <span class="tipo-planeta">· gigante helado · 7.º desde el Sol</span>
+        </summary>
+        <ul>
+          <li>¡Urano <strong>gira de lado</strong>! Está tan inclinado que parece una pelota que va <strong>rodando</strong> alrededor del Sol.</li>
+          <li>Los científicos creen que hace muchísimo tiempo algo muy grande chocó contra él y lo dejó acostado.</li>
+          <li>Es de color <strong>azul verdoso</strong>, por el metano de su aire.</li>
+          <li>Se demora <strong>84 años</strong> en darle una vuelta al Sol. ¡Una persona tendría que ser abuelita para cumplir un año en Urano!</li>
+          <li>Fue el primer planeta descubierto con telescopio, en 1781.</li>
+        </ul>
+      </details>
+
+      <details class="planeta">
+        <summary>
+          <span class="planeta-bola" style="width:50px;height:50px;background:radial-gradient(circle at 35% 35%, #9fc3ff, #3b63d9 55%, #1d2f8a);" role="img" aria-label="Dibujo de Neptuno: bola azul oscuro"></span>
+          Neptuno <span class="tipo-planeta">· gigante helado · 8.º desde el Sol</span>
+        </summary>
+        <ul>
+          <li>Es el planeta <strong>más lejano del Sol</strong>. Allá es oscuro y hace un frío tremendo.</li>
+          <li>Tiene los <strong>vientos más rápidos</strong> del Sistema Solar: ¡más de <strong>2.000 km por hora</strong>! Eso es más rápido que un avión.</li>
+          <li>Es de color <strong>azul</strong>, también por el metano.</li>
+          <li>Su año dura unos <strong>165 años</strong> de la Tierra. Desde que lo descubrieron en 1846, solo ha dado <strong>una</strong> vuelta completa al Sol (la terminó en 2011).</li>
+          <li>No se ve sin telescopio. Lo encontraron primero <strong>con matemáticas</strong>, viendo cómo jalaba a Urano, ¡y después lo buscaron y ahí estaba!</li>
+        </ul>
+      </details>
+    </div>
+
+    <!-- ===== TABLA COMPARATIVA ===== -->
+    <h2>📊 Los 8 planetas comparados</h2>
+    <p>
+      Aquí puse los datos de la NASA, pero <strong>redondeados</strong> para que sea más fácil
+      compararlos. «Un giro» es lo que dura el planeta en dar una vuelta sobre sí mismo, y
+      «Una vuelta al Sol» es lo que dura su año.
+    </p>
+
+    <div class="tabla-contenedor">
+      <table>
+        <caption class="credito-video">Datos aproximados. Fuente: NASA (science.nasa.gov).</caption>
+        <thead>
+          <tr>
+            <th scope="col">Planeta</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Diámetro (km)</th>
+            <th scope="col">Distancia media al Sol (millones de km)</th>
+            <th scope="col">Un giro (su día)</th>
+            <th scope="col">Una vuelta al Sol (su año)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Mercurio</th><td>Rocoso</td>
+            <td class="numero">4.900</td><td class="numero">58</td>
+            <td>59 días</td><td>88 días</td>
+          </tr>
+          <tr>
+            <th scope="row">Venus</th><td>Rocoso</td>
+            <td class="numero">12.100</td><td class="numero">108</td>
+            <td>243 días (al revés)</td><td>225 días</td>
+          </tr>
+          <tr>
+            <th scope="row">Tierra</th><td>Rocoso</td>
+            <td class="numero">12.760</td><td class="numero">150</td>
+            <td>24 horas</td><td>365 días</td>
+          </tr>
+          <tr>
+            <th scope="row">Marte</th><td>Rocoso</td>
+            <td class="numero">6.800</td><td class="numero">228</td>
+            <td>24 horas y media</td><td>687 días (casi 2 años)</td>
+          </tr>
+          <tr>
+            <th scope="row">Júpiter</th><td>Gigante gaseoso</td>
+            <td class="numero">143.000</td><td class="numero">778</td>
+            <td>10 horas</td><td>12 años</td>
+          </tr>
+          <tr>
+            <th scope="row">Saturno</th><td>Gigante gaseoso</td>
+            <td class="numero">120.500</td><td class="numero">1.430</td>
+            <td>10 horas y media</td><td>29 años</td>
+          </tr>
+          <tr>
+            <th scope="row">Urano</th><td>Gigante helado</td>
+            <td class="numero">51.100</td><td class="numero">2.870</td>
+            <td>17 horas</td><td>84 años</td>
+          </tr>
+          <tr>
+            <th scope="row">Neptuno</th><td>Gigante helado</td>
+            <td class="numero">49.500</td><td class="numero">4.500</td>
+            <td>16 horas</td><td>165 años</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sabias">
+      <strong>💡 ¿Te diste cuenta?</strong> Mientras más lejos está un planeta del Sol,
+      <strong>más largo es su año</strong>. Mercurio da la vuelta en 88 días y Neptuno se
+      demora 165 años. ¡Es que el camino es mucho más largo y además van más despacio!
+    </div>
+
+    <!-- ===== OTROS VECINOS ===== -->
+    <h2>☄️ Otros vecinos del Sistema Solar</h2>
+    <p>Además de los 8 planetas, en nuestro vecindario hay otros objetos muy interesantes:</p>
+
+    <div class="rejilla">
+      <div class="tarjeta">
+        <h3>🟤 Planetas enanos</h3>
+        <p>
+          Se parecen a los planetas porque son redonditos y le dan la vuelta al Sol. Sin embargo, son
+          <strong>más pequeños</strong> y comparten su camino con muchos otros objetos.
+        </p>
+        <p>
+          <strong>Plutón</strong> es el más famoso. Es <strong>más pequeño que nuestra Luna</strong>
+          y vive en el <strong>Cinturón de Kuiper</strong>, más allá de Neptuno. ¡Tiene un glaciar
+          con forma de <strong>corazón</strong>!
+        </p>
+        <p>
+          <strong>Ceres</strong> es el planeta enano más cercano a nosotros. Se encuentra en el cinturón de asteroides.
+        </p>
+      </div>
+
+      <div class="tarjeta">
+        <h3>🪨 El cinturón de asteroides</h3>
+        <p>
+          Entre <strong>Marte y Júpiter</strong> hay una zona con muchísimas rocas que le dan la
+          vuelta al Sol: son los <strong>asteroides</strong>.
+        </p>
+        <p>
+          Algunos son pequeños como una piedra y otros miden cientos de kilómetros.
+          Son pedazos que sobraron cuando se formó el Sistema Solar y que
+          <strong>nunca se juntaron para hacer un planeta</strong>.
+        </p>
+      </div>
+
+      <div class="tarjeta">
+        <h3>☄️ Los cometas</h3>
+        <p>
+          Son como <strong>bolas de nieve sucias</strong>: hielo, polvo y roca. Vienen de las
+          partes más lejanas y frías del Sistema Solar.
+        </p>
+        <p>
+          Cuando un cometa se acerca al Sol, el hielo se calienta y le sale una
+          <strong>cola</strong> larguísima y brillante, que siempre apunta hacia el lado contrario del Sol.
+          El cometa Halley pasa cerca de la Tierra más o menos cada 76 años; vuelve en 2061.
+        </p>
+      </div>
+    </div>
+
+    <div class="mito">
+      <strong>❌ Idea equivocada:</strong> «El cinturón de asteroides está lleno de rocas
+      pegaditas y las naves se estrellan al pasar».<br>
+      <strong>✅ Lo correcto:</strong> los asteroides están <strong>muy separados</strong>,
+      a veces a cientos de miles de kilómetros uno de otro. Varias naves de la NASA lo han
+      cruzado sin chocar con nada.
+    </div>
+
+    <!-- ===== CIERRE ===== -->
+    <h2>📝 Lo que aprendí</h2>
+    <p>
+      Aprendí que los 8 planetas son muy diferentes entre sí. Primero están los rocosos, pequeños
+      y con suelo duro; luego, los gigantes gaseosos, que no tienen suelo; y por último, los
+      gigantes helados, fríos y azules. También descubrí que, mientras más lejos está un planeta
+      del Sol, más largo es su año. Además, el Sistema Solar no tiene solo planetas: ¡también
+      hay planetas enanos, asteroides y cometas!
+    </p>
+
+    <nav class="navegacion-paginas" aria-label="Páginas siguiente y anterior">
+      <a href="sol.html">← Anterior: El Sol</a>
+      <a href="tamanos.html">Siguiente: Tamaños y distancias →</a>
+    </nav>
+  </main>
+
+  <!-- ===== PIE DE PÁGINA (es igual en todas las páginas) ===== -->
+  <footer>
+    <p>Página hecha por <span class="autor">Eduard Reina</span> · Grado 5° · Castellano · 2026</p>
+    <p><a href="creditos.html">Glosario, fuentes y créditos</a></p>
+  </footer>
+
+  <script src="js/menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Nunito:wght@400;700;800&display=swap');
+
+/* =========================================================
+   TEMA "CUADERNO DE EXPLORADOR"
+   Se carga DESPUÉS de estilos.css y solo cambia cómo se ve:
+   hoja de cuaderno cuadriculada, notas adhesivas, cinta,
+   letra de "escrito a mano" y colores de marcadores.
+   Todos los colores de texto pasan contraste WCAG AA (4.5:1).
+   ========================================================= */
+
+:root {
+  --fondo: #fdfaf1;          /* hoja de cuaderno color crema */
+  --fondo-tarjeta: #fff4b8;  /* nota adhesiva amarilla */
+  --texto: #1f2a44;          /* tinta azul muy oscura */
+  --texto-suave: #4b5470;    /* lápiz gris */
+  --acento: #b0360c;         /* marcador naranja-rojo */
+  --enlace: #1d4ed8;         /* lapicero azul */
+  --borde: #3b4a6b;          /* trazo de lápiz */
+  --pendiente: #fff3b0;
+
+  /* Colores extra solo de este tema */
+  --cuadricula: #dce8f6;     /* líneas azules de la hoja */
+  --margen-rojo: #f3a6a6;    /* la línea roja del margen */
+  --nota-rosa: #ffe3ec;
+  --nota-verde: #e2f5dc;
+  --nota-azul: #dfeeff;
+  --resaltador: #ffe066;     /* resaltador amarillo */
+  --boton: #1e40af;          /* marcador azul para botones */
+  --bien: #166534;
+  --mal: #b91c1c;
+  --sombra: 0 3px 8px rgba(31, 42, 68, 0.16), 0 1px 2px rgba(31, 42, 68, 0.12);
+  --borde-mano: 255px 15px 225px 15px / 15px 225px 15px 255px; /* borde "dibujado a mano" */
+  --letra-mano: "Patrick Hand", "Comic Sans MS", "Segoe Print", cursive;
+}
+
+/* --- La hoja: cuadrícula y sin estrellas --- */
+body {
+  font-family: "Nunito", "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+  color: var(--texto);
+  background-color: var(--fondo);
+  background-image:
+    linear-gradient(var(--cuadricula) 1px, transparent 1px),
+    linear-gradient(90deg, var(--cuadricula) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+
+/* Línea roja del margen, solo en pantallas anchas (en celular estorbaría) */
+@media (min-width: 901px) {
+  body {
+    background-image:
+      linear-gradient(90deg, transparent 46px, var(--margen-rojo) 46px, var(--margen-rojo) 48px, transparent 48px),
+      linear-gradient(var(--cuadricula) 1px, transparent 1px),
+      linear-gradient(90deg, var(--cuadricula) 1px, transparent 1px);
+    background-size: 100% 100%, 26px 26px, 26px 26px;
+    background-attachment: fixed, scroll, scroll;
+  }
+}
+
+a { color: var(--enlace); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+a:hover, a:focus { color: var(--acento); }
+:focus-visible { outline: 3px dashed var(--enlace); outline-offset: 3px; }
+
+/* --- Títulos escritos a mano --- */
+h1, h2, h3, .logo, legend, details.planeta summary {
+  font-family: var(--letra-mano);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+h1 {
+  color: var(--acento);
+  font-size: 2.7rem;
+  display: inline-block;
+  padding: 0 0.4rem;
+  /* trazo de resaltador debajo del título */
+  background: linear-gradient(transparent 62%, var(--resaltador) 62%, var(--resaltador) 92%, transparent 92%);
+  transform: rotate(-1deg);
+}
+h2 {
+  color: var(--acento);
+  font-size: 2rem;
+  border-bottom: 3px dashed var(--borde);
+  padding-bottom: 0.2rem;
+}
+h3 { color: var(--texto); font-size: 1.6rem; }
+
+/* --- Encabezado y menú --- */
+.encabezado {
+  background: rgba(253, 250, 241, 0.96);
+  border-bottom: 3px solid var(--borde);
+  box-shadow: 0 2px 6px rgba(31, 42, 68, 0.12);
+}
+.logo { color: var(--acento); font-size: 1.7rem; }
+
+.menu summary {
+  border: 2px solid var(--acento);
+  border-radius: var(--borde-mano);
+  color: var(--acento);
+  background: #ffffff;
+  font-family: var(--letra-mano);
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+.menu a { color: var(--texto); font-weight: 700; border-radius: var(--borde-mano); }
+.menu a:hover, .menu a:focus { background: var(--fondo-tarjeta); color: var(--acento); }
+.menu a[aria-current="page"] {
+  background: var(--resaltador);
+  color: #1a1a1a;
+  box-shadow: inset 0 0 0 2px var(--borde);
+}
+
+@media (max-width: 900px) {
+  .menu[open] ul {
+    background: var(--fondo);
+    border-bottom: 3px solid var(--borde);
+    box-shadow: 0 6px 12px rgba(31, 42, 68, 0.18);
+  }
+}
+
+/* --- Contenido --- */
+.intro { color: var(--texto-suave); }
+
+/* Tarjetas: notas adhesivas pegadas con cinta */
+.tarjeta, details.planeta {
+  position: relative;
+  background: var(--fondo-tarjeta);
+  color: var(--texto);
+  border: 2px solid var(--borde);
+  border-radius: var(--borde-mano);
+  box-shadow: var(--sombra);
+}
+.tarjeta::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  width: 90px;
+  height: 24px;
+  transform: translateX(-50%) rotate(-3deg);
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(59, 74, 107, 0.25);
+  box-shadow: 0 1px 2px rgba(31, 42, 68, 0.15);
+  pointer-events: none;
+}
+.rejilla { gap: 1.6rem; padding-top: 0.6rem; }
+.rejilla .tarjeta:nth-child(4n+1) { background: var(--fondo-tarjeta); transform: rotate(-1deg); }
+.rejilla .tarjeta:nth-child(4n+2) { background: var(--nota-rosa);     transform: rotate(0.8deg); }
+.rejilla .tarjeta:nth-child(4n+3) { background: var(--nota-verde);    transform: rotate(-0.6deg); }
+.rejilla .tarjeta:nth-child(4n)   { background: var(--nota-azul);     transform: rotate(1deg); }
+
+a.tarjeta { color: var(--texto); transition: transform 0.15s ease, box-shadow 0.15s ease; }
+a.tarjeta:hover, a.tarjeta:focus {
+  border-color: var(--acento);
+  transform: rotate(0) translateY(-3px);
+  box-shadow: 0 8px 16px rgba(31, 42, 68, 0.22);
+}
+
+/* "¿Sabías que...?" en papel azul y "¡Ojo!" en papel rosa */
+.sabias {
+  background: var(--nota-azul);
+  color: var(--texto);
+  border-left: 8px solid var(--enlace);
+  border-radius: 0 14px 14px 0;
+  box-shadow: var(--sombra);
+}
+.mito {
+  background: var(--nota-rosa);
+  color: var(--texto);
+  border-left: 8px solid var(--mal);
+  border-radius: 0 14px 14px 0;
+  box-shadow: var(--sombra);
+}
+
+.pendiente {
+  background: var(--pendiente);
+  color: #3a2f00;
+  border: 2px dashed #8a6d00;
+}
+
+/* --- Video como una foto pegada en el cuaderno --- */
+.video {
+  background: #ffffff;
+  padding: 10px 10px 10px;
+  box-shadow: var(--sombra);
+  transform: rotate(-0.5deg);
+}
+.video iframe { inset: 10px; width: calc(100% - 20px); height: calc(100% - 20px); border-radius: 4px; }
+.video::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  left: -14px;
+  width: 80px;
+  height: 22px;
+  transform: rotate(-35deg);
+  background: rgba(255, 224, 102, 0.75);
+  pointer-events: none;
+}
+.credito-video { color: var(--texto-suave); margin-top: 0.4rem; }
+
+/* El Sol dibujado, sin tanto brillo sobre papel claro */
+.sol-bola { box-shadow: 0 0 0 3px #e08a00, 0 0 30px rgba(255, 179, 0, 0.55); }
+
+/* --- Planetas que se abren --- */
+details.planeta summary { font-size: 1.6rem; color: var(--texto); }
+details.planeta[open] summary { color: var(--acento); }
+
+/* --- Tablas como en el cuaderno --- */
+table { background: #ffffff; box-shadow: var(--sombra); }
+th, td { border: 1.5px solid var(--borde); color: var(--texto); }
+th {
+  background: var(--fondo-tarjeta);
+  color: var(--acento);
+  font-family: var(--letra-mano);
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+tbody tr:nth-child(even) td { background: #f6f9fe; }
+
+/* --- Formularios --- */
+input[type="number"], select {
+  background: #ffffff;
+  color: var(--texto);
+  border: 2px solid var(--borde);
+  border-radius: var(--borde-mano);
+  font-family: inherit;
+}
+button {
+  background: var(--boton);
+  color: #ffffff;
+  font-family: inherit;
+  border: 2px solid var(--texto);
+  border-radius: var(--borde-mano);
+  box-shadow: 3px 3px 0 var(--texto);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+button:hover, button:focus { filter: none; background: #1d3a9e; transform: translate(-1px, -1px); box-shadow: 4px 4px 0 var(--texto); }
+button:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--texto); }
+
+.pregunta fieldset {
+  background: #ffffff;
+  border: 2px solid var(--borde);
+  border-radius: var(--borde-mano);
+  box-shadow: var(--sombra);
+}
+.pregunta legend { color: var(--acento); font-size: 1.35rem; background: var(--fondo); }
+.correcta { color: var(--bien); }
+.incorrecta { color: var(--mal); }
+
+/* --- Regla de distancias: como una regla dibujada con lápiz --- */
+.regla-distancias { border-bottom: 3px solid var(--borde); }
+.marca { color: var(--texto); font-weight: 700; }
+.marca .punto { box-shadow: 0 0 0 2px var(--borde); }
+.comparador figcaption { color: var(--texto); }
+
+/* --- Pie de página --- */
+footer {
+  border-top: 3px dashed var(--borde);
+  color: var(--texto-suave);
+  background: rgba(253, 250, 241, 0.9);
+}
+
+/* Sin giros ni movimiento para quien lo prefiera */
+@media (prefers-reduced-motion: reduce) {
+  h1, .video, .rejilla .tarjeta, a.tarjeta:hover, a.tarjeta:focus { transform: none !important; }
+  a.tarjeta, button { transition: none; }
+}

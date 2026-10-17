@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Sistema Solar | ¡Juega!</title>
+  <meta name="description" content="Quiz de 12 preguntas sobre el Sistema Solar y sus leyendas, y adivinanzas del espacio escritas por Eduard.">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/tema-cuaderno.css">
+  <style>
+    /* Estilos pequeños solo para esta página (usan los colores del tema) */
+    .resultado-pregunta {
+      margin-top: 0.6rem;
+      padding: 0.6rem 0.8rem;
+      border-left: 4px solid var(--acento);
+      background: var(--fondo-tarjeta);
+      border-radius: 8px;
+    }
+    .resultado-pregunta p { margin: 0.3rem 0; }
+    .resultado-pregunta p:not(.correcta):not(.incorrecta) { font-weight: normal; }
+    .pregunta label.correcta, .pregunta label.incorrecta { font-weight: bold; }
+    .pregunta input[type="radio"] { width: 1.1rem; height: 1.1rem; vertical-align: middle; }
+    .puntaje {
+      font-size: 1.3rem;
+      font-weight: bold;
+      text-align: center;
+      padding: 1rem;
+      border: 3px solid var(--acento);
+      border-radius: 14px;
+      background: var(--fondo-tarjeta);
+    }
+    .botones-quiz { display: flex; flex-wrap: wrap; gap: 0.8rem; margin: 1rem 0; }
+    .adivinanza p { font-style: italic; line-height: 1.6; }
+    .adivinanza summary { cursor: pointer; color: var(--enlace); font-weight: bold; }
+    .adivinanza details[open] summary { color: var(--acento); }
+  </style>
+</head>
+<body>
+
+  <!-- ===== ENCABEZADO Y MENÚ (es igual en todas las páginas) ===== -->
+  <header class="encabezado">
+    <div class="encabezado-interior">
+      <a class="logo" href="index.html">🪐 El Sistema Solar</a>
+      <nav aria-label="Menú principal">
+        <details class="menu" open>
+          <summary>☰ Menú</summary>
+          <ul>
+            <li><a href="index.html">🏠 Inicio</a></li>
+            <li><a href="sol.html">☀️ El Sol</a></li>
+            <li><a href="planetas.html">🪐 Los planetas</a></li>
+            <li><a href="tamanos.html">📏 Tamaños y distancias</a></li>
+            <li><a href="tierra-luna.html">🌍 Tierra y Luna</a></li>
+            <li><a href="peso.html">⚖️ ¿Cuánto pesarías?</a></li>
+            <li><a href="leyendas.html">📖 Leyendas</a></li>
+            <li><a href="juega.html" aria-current="page">🎮 ¡Juega!</a></li>
+            <li><a href="creditos.html">📚 Glosario y fuentes</a></li>
+          </ul>
+        </details>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== CONTENIDO DE ESTA PÁGINA ===== -->
+  <main>
+    <h1>🎮 ¡Juega! Quiz del Sistema Solar</h1>
+    <p class="intro">
+      ¿Leíste toda la página? ¡Ahora vamos a ver cuánto aprendiste!
+      Son <strong>12 preguntas</strong>, y las dos últimas son sobre las leyendas. Escoge una respuesta en cada una y al final
+      oprime <strong>«¡Revisar mis respuestas!»</strong>.
+    </p>
+
+    <div class="sabias">
+      <strong>💡 Consejo:</strong> no te preocupes si fallas. Después de revisar,
+      cada pregunta te dice la respuesta buena y en qué página la puedes repasar.
+      ¡Puedes jugar las veces que quieras!
+    </div>
+
+    <noscript>
+      <div class="mito">
+        <strong>😕 Este quiz necesita JavaScript.</strong> Tu navegador lo tiene apagado,
+        así que no se pueden ver las preguntas. Pídele ayuda a un adulto para encenderlo,
+        o repasa las páginas del menú.
+      </div>
+    </noscript>
+
+    <!-- El quiz empieza escondido; js/quiz.js pone las preguntas y lo muestra -->
+    <form id="quiz" hidden>
+      <div id="quiz-preguntas"></div>
+
+      <div class="botones-quiz">
+        <button type="submit">✅ ¡Revisar mis respuestas!</button>
+        <button type="button" id="quiz-otra-vez">🔄 Intentar de nuevo</button>
+      </div>
+    </form>
+
+    <!-- Aquí sale el puntaje final. aria-live hace que un lector de pantalla lo lea en voz alta -->
+    <div id="quiz-puntaje" class="puntaje" role="status" aria-live="polite" tabindex="-1" hidden></div>
+
+    <!-- ===== ADIVINANZAS (las escribí yo) ===== -->
+    <h2>🧩 Adivinanzas del espacio</h2>
+    <p>
+      Escribí estas adivinanzas en verso, con rima. Léelas en voz alta, piensa bien
+      y después oprime <strong>«Ver respuesta»</strong> para saber si acertaste.
+    </p>
+
+    <div class="rejilla">
+      <div class="tarjeta adivinanza">
+        <h3>Adivinanza 1</h3>
+        <p>
+          No soy planeta, soy estrella,<br>
+          la más cercana de todas;<br>
+          de día te doy luz bella<br>
+          y calor para las hojas.<br>
+          ¿Quién soy?
+        </p>
+        <details>
+          <summary>Ver respuesta</summary>
+          <p>☀️ <strong>El Sol.</strong> Es la estrella más cercana a la Tierra.</p>
+        </details>
+      </div>
+
+      <div class="tarjeta adivinanza">
+        <h3>Adivinanza 2</h3>
+        <p>
+          No tengo luz, me la presta el Sol;<br>
+          de noche alumbro como un farol.<br>
+          A veces redonda, a veces cachito,<br>
+          a la Tierra le doy la vuelta despacito.<br>
+          ¿Quién soy?
+        </p>
+        <details>
+          <summary>Ver respuesta</summary>
+          <p>🌙 <strong>La Luna.</strong> Refleja la luz del Sol y por eso vemos sus fases.</p>
+        </details>
+      </div>
+
+      <div class="tarjeta adivinanza">
+        <h3>Adivinanza 3</h3>
+        <p>
+          Llevo anillos muy brillantes<br>
+          hechos de hielo y de roca;<br>
+          entre todos los gigantes,<br>
+          el segundo puesto me toca.<br>
+          ¿Quién soy?
+        </p>
+        <details>
+          <summary>Ver respuesta</summary>
+          <p>🪐 <strong>Saturno.</strong> Es el segundo planeta más grande, después de Júpiter.</p>
+        </details>
+      </div>
+
+      <div class="tarjeta adivinanza">
+        <h3>Adivinanza 4</h3>
+        <p>
+          Tercera desde el Sol voy,<br>
+          con mares y con montañas;<br>
+          giro y giro, y por eso hoy<br>
+          tienes noches y mañanas.<br>
+          ¿Quién soy?
+        </p>
+        <details>
+          <summary>Ver respuesta</summary>
+          <p>🌍 <strong>La Tierra.</strong> Gira sobre sí misma (rotación) y por eso hay día y noche.</p>
+        </details>
+      </div>
+
+      <div class="tarjeta adivinanza">
+        <h3>Adivinanza 5</h3>
+        <p>
+          Soy una bola de hielo y polvo,<br>
+          del frío lejano vengo;<br>
+          cuando cerca del Sol paso,<br>
+          una cola larga tengo.<br>
+          ¿Quién soy?
+        </p>
+        <details>
+          <summary>Ver respuesta</summary>
+          <p>☄️ <strong>Un cometa.</strong> Cuando se acerca al Sol, el calor le saca gas y polvo, y así se forma su cola.</p>
+        </details>
+      </div>
+    </div>
+
+    <nav class="navegacion-paginas" aria-label="Páginas siguiente y anterior">
+      <a href="leyendas.html">← Anterior: Leyendas</a>
+      <a href="creditos.html">Siguiente: Glosario y fuentes →</a>
+    </nav>
+  </main>
+
+  <!-- ===== PIE DE PÁGINA (es igual en todas las páginas) ===== -->
+  <footer>
+    <p>Página hecha por <span class="autor">Eduard Reina</span> · Grado 5° · Castellano · 2026</p>
+    <p><a href="creditos.html">Glosario, fuentes y créditos</a></p>
+  </footer>
+
+  <script src="js/menu.js"></script>
+  <script src="js/quiz.js"></script>
+</body>
+</html>

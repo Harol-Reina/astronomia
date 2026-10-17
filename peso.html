@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Sistema Solar | ¿Cuánto pesarías?</title>
+  <meta name="description" content="Calculadora de grado quinto: descubre cuánto marcaría tu báscula en los planetas y en la Luna, y aprende la diferencia entre masa y peso.">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/tema-cuaderno.css">
+  <style>
+    /* Separación entre la cajita del número y el botón */
+    .calculadora { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 0.8rem; }
+    .calculadora label { display: block; margin-bottom: 0.3rem; }
+  </style>
+</head>
+<body>
+
+  <!-- ===== ENCABEZADO Y MENÚ (es igual en todas las páginas) ===== -->
+  <header class="encabezado">
+    <div class="encabezado-interior">
+      <a class="logo" href="index.html">🪐 El Sistema Solar</a>
+      <nav aria-label="Menú principal">
+        <details class="menu" open>
+          <summary>☰ Menú</summary>
+          <ul>
+            <li><a href="index.html">🏠 Inicio</a></li>
+            <li><a href="sol.html">☀️ El Sol</a></li>
+            <li><a href="planetas.html">🪐 Los planetas</a></li>
+            <li><a href="tamanos.html">📏 Tamaños y distancias</a></li>
+            <li><a href="tierra-luna.html">🌍 Tierra y Luna</a></li>
+            <li><a href="peso.html" aria-current="page">⚖️ ¿Cuánto pesarías?</a></li>
+            <li><a href="leyendas.html">📖 Leyendas</a></li>
+            <li><a href="juega.html">🎮 ¡Juega!</a></li>
+            <li><a href="creditos.html">📚 Glosario y fuentes</a></li>
+          </ul>
+        </details>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== CONTENIDO DE ESTA PÁGINA ===== -->
+  <main>
+    <h1>⚖️ ¿Cuánto pesarías en otros planetas?</h1>
+    <p class="intro">
+      ¿Se imaginan subirse a una báscula en la Luna o en Júpiter? Yo sí, y por eso hice
+      esta calculadora. Pero antes les tengo que contar un secreto: <strong>masa</strong>
+      y <strong>peso</strong> no son lo mismo.
+    </p>
+
+    <h2>Masa y peso: no son lo mismo</h2>
+    <div class="rejilla">
+      <div class="tarjeta">
+        🧱 <strong>Masa</strong><br>
+        Es <strong>cuánta materia tienes</strong>, o sea, de cuánto «material» estás hecho.
+        Tu masa <strong>no cambia</strong> si viajas a otro planeta. Eres el mismo niño o la
+        misma niña en la Tierra, en la Luna o en Júpiter.
+      </div>
+      <div class="tarjeta">
+        🧲 <strong>Peso</strong><br>
+        Es <strong>qué tan fuerte te jala la gravedad</strong> del planeta donde estás.
+        Por eso, el peso <strong>sí cambia</strong>: en un lugar que jala poquito pesas menos,
+        y en uno que jala duro pesas más.
+      </div>
+    </div>
+
+    <div class="sabias">
+      <strong>💡 ¿Sabías que...?</strong>
+      En Colombia decimos «peso 35 kilos», pero los kilos en realidad miden la
+      <strong>masa</strong>. Lo que hace la báscula es sentir qué tan fuerte la aplastas
+      (eso es el peso) y convertirlo en kilos, pensando que estás en la Tierra.
+      Mi calculadora muestra <strong>lo que marcaría una báscula de la Tierra si la
+      llevaras a cada lugar</strong>.
+    </div>
+
+    <h2>¿Por qué unos planetas jalan más que otros?</h2>
+    <p>
+      La gravedad es la fuerza que hace que las cosas se caigan al suelo y que te mantiene
+      pegado a la Tierra. Los planetas con <strong>más masa jalan más fuerte</strong>.
+      Así, Júpiter, el gigante, es el que más jala de todos los planetas.
+    </p>
+    <p>
+      Sin embargo, también <strong>importa el tamaño</strong>: si el planeta es enorme, su superficie
+      queda muy lejos del centro, y desde allá el jalón se siente más suave. Por ejemplo,
+      Urano tiene unas <strong>15 veces más masa</strong> que la Tierra, pero es tan grande
+      que ¡pesarías un poquito <strong>menos</strong> que aquí!
+    </p>
+    <p>
+      Ojo: Júpiter, Saturno, Urano y Neptuno <strong>no tienen suelo</strong> para pararse,
+      porque son de gas y hielo. Sus números muestran lo que pasaría si pudieras quedarte
+      quieto arriba, en sus nubes.
+    </p>
+
+    <div class="sabias">
+      <strong>💡 Un ejemplo de la NASA:</strong>
+      si algo marca <strong>100</strong> en una báscula de la Tierra, en Mercurio marcaría
+      más o menos <strong>38</strong>, y en Júpiter, unos <strong>253</strong>.
+      ¡Pero su masa sería la misma en los tres lugares!
+    </div>
+
+    <h2>🧮 Mi calculadora</h2>
+    <p>Escribe lo que marca tu báscula en la Tierra y oprime <strong>Calcular</strong>.</p>
+
+    <form id="form-peso" class="tarjeta calculadora" novalidate>
+      <div>
+        <label for="kilos">Lo que marca tu báscula en la Tierra (kg)</label>
+        <input type="number" id="kilos" name="kilos" min="1" max="200" step="any"
+               inputmode="decimal" placeholder="Ej.: 35" aria-describedby="ayuda-kilos" required>
+        <p id="ayuda-kilos" class="credito-video" style="margin-top: 0.3rem;">Un número entre 1 y 200.</p>
+      </div>
+      <button type="submit">Calcular</button>
+    </form>
+
+    <div id="resultado-peso" aria-live="polite"></div>
+
+    <div class="mito">
+      <strong>❌ Idea equivocada:</strong> «En el espacio no pesas nada porque no hay gravedad».<br>
+      <strong>✅ Lo correcto:</strong> la gravedad sigue ahí. Donde vuelan los astronautas, la
+      Tierra los jala casi igual de fuerte que aquí abajo. Ellos flotan porque su nave y ellos
+      van <strong>cayendo todo el tiempo alrededor de la Tierra</strong>, tan rápido que nunca
+      llegan al suelo. Como todo cae junto, nada los empuja contra el piso y, entonces, flotan.
+    </div>
+
+    <h2>📝 Lo que aprendí</h2>
+    <div class="tarjeta">
+      <p>
+        Con esta calculadora aprendí que mi masa es la misma en cualquier lugar, pero mi peso
+        cambia según la gravedad de cada planeta. Además, descubrí que el tamaño también cuenta:
+        Saturno es gigantesco y, aun así, jala casi igual que la Tierra. Mi lugar favorito es
+        la Luna, porque allá podría saltar altísimo.
+      </p>
+    </div>
+
+    <nav class="navegacion-paginas" aria-label="Páginas siguiente y anterior">
+      <a href="tierra-luna.html">← Anterior: Tierra y Luna</a>
+      <a href="leyendas.html">Siguiente: Leyendas →</a>
+    </nav>
+  </main>
+
+  <!-- ===== PIE DE PÁGINA (es igual en todas las páginas) ===== -->
+  <footer>
+    <p>Página hecha por <span class="autor">Eduard Reina</span> · Grado 5° · Castellano · 2026</p>
+    <p><a href="creditos.html">Glosario, fuentes y créditos</a></p>
+  </footer>
+
+  <script src="js/menu.js"></script>
+  <script src="js/peso.js"></script>
+</body>
+</html>

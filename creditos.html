@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Sistema Solar | Glosario y fuentes</title>
+  <meta name="description" content="Glosario del Sistema Solar, cómo escribí la página y de dónde saqué la información, las leyendas, los videos y los dibujos.">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/tema-cuaderno.css">
+  <style>
+    /* Fila de planetas dibujados con código */
+    .dibujos-css { display: flex; gap: 1rem; align-items: center; margin: 1rem 0; }
+    .tarjeta ul, .sabias ul { margin: 0.4rem 0; padding-left: 1.2rem; }
+    /* Glosario: la palabra resaltada y su definición debajo */
+    .glosario { margin: 0; }
+    .glosario dt { font-weight: bold; color: var(--acento); margin-top: 0.7rem; }
+    .glosario dt:first-child { margin-top: 0; }
+    .glosario dd { margin: 0.15rem 0 0 0; color: var(--texto); }
+    h3 { color: var(--acento); }
+  </style>
+</head>
+<body>
+
+  <!-- ===== ENCABEZADO Y MENÚ (es igual en todas las páginas) ===== -->
+  <header class="encabezado">
+    <div class="encabezado-interior">
+      <a class="logo" href="index.html">🪐 El Sistema Solar</a>
+      <nav aria-label="Menú principal">
+        <details class="menu" open>
+          <summary>☰ Menú</summary>
+          <ul>
+            <li><a href="index.html">🏠 Inicio</a></li>
+            <li><a href="sol.html">☀️ El Sol</a></li>
+            <li><a href="planetas.html">🪐 Los planetas</a></li>
+            <li><a href="tamanos.html">📏 Tamaños y distancias</a></li>
+            <li><a href="tierra-luna.html">🌍 Tierra y Luna</a></li>
+            <li><a href="peso.html">⚖️ ¿Cuánto pesarías?</a></li>
+            <li><a href="leyendas.html">📖 Leyendas</a></li>
+            <li><a href="juega.html">🎮 ¡Juega!</a></li>
+            <li><a href="creditos.html" aria-current="page">📚 Glosario y fuentes</a></li>
+          </ul>
+        </details>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== CONTENIDO DE ESTA PÁGINA ===== -->
+  <main>
+    <h1>📚 Glosario y fuentes</h1>
+    <p class="intro">
+      Aquí están las palabras difíciles de mi página explicadas con mis palabras.
+      También cuento cómo escribí la página y de dónde saqué la información. Es
+      importante decir de dónde vienen las cosas, porque así ustedes pueden revisarlas
+      y porque el trabajo de otras personas se respeta.
+    </p>
+
+    <!-- 1. Glosario -->
+    <h2 id="glosario">🔤 Glosario</h2>
+    <p>
+      Un <strong>glosario</strong> es como un diccionario chiquito con las palabras
+      de un tema. Las puse en <strong>orden alfabético</strong> para que las encuentres
+      rápido. Las que tienen ⭐ llevan <strong>tilde</strong>: ¡fíjate bien dónde va!
+    </p>
+    <div class="rejilla">
+      <div class="tarjeta">
+        <dl class="glosario">
+          <dt>Asteroide</dt>
+          <dd>Una roca que gira alrededor del Sol. Hay muchísimos en el cinturón de asteroides, entre Marte y Júpiter.</dd>
+          <dt>Astro</dt>
+          <dd>Cualquier cuerpo que está en el espacio, como el Sol, la Luna, un planeta o una estrella.</dd>
+          <dt>⭐ Astrónomo</dt>
+          <dd>La persona que estudia los astros. Usa telescopios y hace muchas cuentas.</dd>
+          <dt>⭐ Atmósfera</dt>
+          <dd>La capa de gases que envuelve a un planeta. La de la Tierra tiene el aire que respiramos.</dd>
+          <dt>Cacique</dt>
+          <dd>El jefe de un pueblo indígena. En la leyenda muisca, el cacique de Ramiriquí se convirtió en el Sol y el de Sogamoso, en la Luna.</dd>
+          <dt>⭐ Cinturón de Kuiper</dt>
+          <dd>Una zona muy lejana, más allá de Neptuno, llena de objetos helados. Allí están Plutón y Huya, que se llama así por Juyá, la lluvia del pueblo wayuu.</dd>
+          <dt>Cometa</dt>
+          <dd>Una bola de hielo y polvo. Cuando se acerca al Sol, le sale una cola larga y brillante.</dd>
+          <dt>Eclipse</dt>
+          <dd>Cuando un astro tapa la luz de otro. Por ejemplo, cuando la Luna se pone delante del Sol.</dd>
+          <dt>Eje</dt>
+          <dd>Una línea imaginaria que va del polo norte al polo sur. La Tierra gira alrededor de ella.</dd>
+          <dt>Estrella</dt>
+          <dd>Una bola gigante de gas muy caliente que tiene luz propia. ¡El Sol es una estrella!</dd>
+        </dl>
+      </div>
+      <div class="tarjeta">
+        <dl class="glosario">
+          <dt>Fase</dt>
+          <dd>Cada forma de la parte iluminada de la Luna que vemos desde la Tierra: nueva, creciente, llena y menguante.</dd>
+          <dt>Galaxia</dt>
+          <dd>Un grupo enorme de estrellas, gas y polvo. Nuestra galaxia se llama Vía Láctea.</dd>
+          <dt>Gravedad</dt>
+          <dd>La fuerza que jala las cosas hacia el suelo. Los astros con más masa jalan más fuerte.</dd>
+          <dt>Leyenda</dt>
+          <dd>Un relato que la gente cuenta de abuelos a nietos. Mezcla cosas reales con cosas imaginarias.</dd>
+          <dt>Masa</dt>
+          <dd>Cuánta materia (cuánto «material») tiene algo. Tu masa no cambia aunque viajes a otro planeta.</dd>
+          <dt>Mito</dt>
+          <dd>Un relato antiguo de un pueblo que explica cómo nacieron las cosas, por ejemplo, el Sol y la Luna.</dd>
+          <dt>⭐ Órbita</dt>
+          <dd>El camino que sigue un astro cuando da vueltas alrededor de otro.</dd>
+        </dl>
+      </div>
+      <div class="tarjeta">
+        <dl class="glosario">
+          <dt>Peso</dt>
+          <dd>Qué tan fuerte te jala la gravedad. Por eso tu peso cambia de un planeta a otro.</dd>
+          <dt>Planeta</dt>
+          <dd>Un astro redondo y grande que gira alrededor del Sol y no brilla con luz propia.</dd>
+          <dt>Planeta enano</dt>
+          <dd>Un astro redondo que gira alrededor del Sol, pero que comparte su camino con otras rocas. Plutón y Ceres lo son.</dd>
+          <dt>⭐ Rotación</dt>
+          <dd>Cuando un astro gira sobre su eje. La Tierra da una vuelta en unas 24 horas: ¡un día!</dd>
+          <dt>⭐ Satélite</dt>
+          <dd>Un astro que gira alrededor de un planeta. La Luna es el satélite natural de la Tierra.</dd>
+          <dt>⭐ Traslación</dt>
+          <dd>La vuelta que da un planeta alrededor del Sol. La Tierra se demora unos 365 días y un cuarto: ¡un año!</dd>
+          <dt>⭐ Unidad Astronómica (UA)</dt>
+          <dd>Una medida para distancias del espacio. 1 UA es la distancia de la Tierra al Sol: unos 150 millones de kilómetros.</dd>
+        </dl>
+      </div>
+    </div>
+
+    <div class="sabias">
+      <strong>💡 Palabras esdrújulas del espacio</strong><br>
+      Las palabras <strong>esdrújulas</strong> tienen la fuerza de la voz en la
+      <strong>antepenúltima sílaba</strong> (la tercera contando desde el final).
+      ¡Y <strong>todas</strong> llevan tilde! En mi página hay varias:
+      <ul>
+        <li><strong>ór</strong>-bi-ta</li>
+        <li>sa-<strong>té</strong>-li-te</li>
+        <li>at-<strong>mós</strong>-fe-ra</li>
+        <li>as-<strong>tró</strong>-no-mo</li>
+        <li>as-tro-<strong>nó</strong>-mi-ca</li>
+        <li>ki-<strong>ló</strong>-me-tro</li>
+        <li><strong>Jú</strong>-pi-ter</li>
+      </ul>
+      <strong>¡Ojo con Júpiter!</strong> Como termina en <em>r</em>, parece grave, pero si lo separas en sílabas
+      (<strong>Jú</strong>-pi-ter) ves que la fuerza está en la tercera desde el final.
+      Entonces es <strong>esdrújula</strong>.<br>
+      Para comparar: <strong>Plutón</strong>, <strong>rotación</strong> y
+      <strong>traslación</strong> son <strong>agudas</strong> (fuerza en la última sílaba y
+      terminan en <em>n</em>, por eso llevan tilde). <strong>Mercurio</strong>,
+      <strong>planeta</strong> y <strong>Saturno</strong> son <strong>graves</strong> y no
+      llevan tilde porque terminan en vocal.
+    </div>
+
+    <!-- 2. Cómo escribí esta página -->
+    <h2 id="como-escribi">✍️ Cómo escribí esta página</h2>
+    <p>
+      Esta página no salió de una sola vez. La escribí por pasos, como un escritor de
+      verdad:
+    </p>
+    <div class="rejilla">
+      <div class="tarjeta">
+        <strong>1. 🗺️ Plan</strong><br>
+        Primero escogí el tema: <strong>el Sistema Solar</strong>. Luego hice un
+        <strong>mapa de ideas</strong> con las partes que quería contar.
+      </div>
+      <div class="tarjeta">
+        <strong>2. 🔎 Busqué fuentes</strong><br>
+        Después busqué información en páginas serias, como la NASA y el Ministerio de
+        Educación. También busqué leyendas de pueblos de Colombia.
+      </div>
+      <div class="tarjeta">
+        <strong>3. 📝 Escribí el borrador</strong><br>
+        Luego escribí la <strong>primera versión</strong> con mis palabras. No copié y
+        pegué: leí, entendí y lo conté a mi manera.
+      </div>
+      <div class="tarjeta">
+        <strong>4. 🔍 Corregí</strong><br>
+        Revisé la <strong>ortografía</strong> (las tildes y las mayúsculas) y los
+        <strong>conectores</strong>, como <em>primero</em>, <em>luego</em>,
+        <em>porque</em>, <em>pero</em> y <em>por eso</em>. Después lo reescribí mejor.
+      </div>
+      <div class="tarjeta">
+        <strong>5. 🌐 Publiqué</strong><br>
+        Finalmente, publiqué la página en internet para que todos la puedan leer.
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <strong>🗺️ Mi mapa de ideas</strong><br>
+      En el centro puse el tema, y de ahí salen las partes de la página (que son las
+      del menú):
+      <ul>
+        <li><strong>El Sistema Solar</strong>
+          <ul>
+            <li>☀️ El Sol</li>
+            <li>🪐 Los planetas</li>
+            <li>📏 Tamaños y distancias</li>
+            <li>🌍 Tierra y Luna</li>
+            <li>⚖️ ¿Cuánto pesarías?</li>
+            <li>📖 Leyendas</li>
+            <li>🎮 ¡Juega!</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 3. Fuentes -->
+    <h2 id="fuentes">🔎 Fuentes</h2>
+    <p>
+      Usé fuentes serias: del Ministerio de Educación de Colombia, de agencias
+      espaciales de verdad y de expertos en las culturas de nuestros pueblos.
+    </p>
+
+    <h3>📘 Fuentes de Castellano</h3>
+    <p>Estos documentos dicen lo que debemos aprender en Lenguaje en quinto.</p>
+    <div class="rejilla">
+      <div class="tarjeta">
+        🇨🇴 <strong>Derechos Básicos de Aprendizaje (DBA) de Lenguaje, versión 2 (MEN, 2016)</strong><br>
+        Lo que debemos aprender en Lenguaje en quinto (páginas 24 a 27), por ejemplo
+        hacer un plan antes de escribir un texto.
+        <ul>
+          <li><a href="https://blog.utp.edu.co/educacion-ambiental-de-risaralda/files/2023/12/DBA-Lenguaje.pdf">Ver el documento (PDF)</a></li>
+          <li><a href="https://colombiaaprende.edu.co/recurso-coleccion/derechos-basicos-de-aprendizaje-dba-lenguaje">Ver en Colombia Aprende</a></li>
+        </ul>
+      </div>
+      <div class="tarjeta">
+        🇨🇴 <strong>Estándares Básicos de Competencias del Lenguaje (MEN, 2006)</strong><br>
+        Lo que debemos saber al terminar quinto (páginas 34 y 35): hacer un plan,
+        escribir una primera versión y reescribirla, y leer mitos y leyendas.<br>
+        <a href="https://www.mineducacion.gov.co/1621/articles-340021_recurso_1.pdf">Ver el documento (PDF)</a>
+      </div>
+    </div>
+
+    <h3>📖 Fuentes de las leyendas</h3>
+    <p>
+      De aquí saqué las leyendas y los datos de la astronomía en Colombia. En la página
+      <a href="leyendas.html">Leyendas</a>, debajo de cada historia, está la lista completa
+      de sus fuentes (también el libro de Michel Perrin sobre los wayuu, el Museo del Oro y
+      el Planetario de Bogotá).
+    </p>
+    <div class="rejilla">
+      <div class="tarjeta">
+        ✒️ <strong>Fray Pedro Simón, <em>Noticias historiales</em> (siglo XVII)</strong><br>
+        Este cronista español escribió la leyenda muisca de cómo nacieron el Sol y la
+        Luna. Ojo: la escribió él, no los muiscas.
+      </div>
+      <div class="tarjeta">
+        📅 <strong>Manuel Arturo Izquierdo Peña, «The Muisca Calendar» (2008)</strong><br>
+        Un artículo sobre el calendario muisca, que usaba la Luna y el Sol. También
+        cuenta la leyenda de fray Pedro Simón (en inglés).<br>
+        <a href="https://arxiv.org/pdf/0812.0574">Ver el artículo (PDF)</a>
+      </div>
+      <div class="tarjeta">
+        📻 <strong>Radio Nacional de Colombia, «Juyá, el dios de la lluvia para los wayuu»</strong><br>
+        Aquí aprendí sobre Juyá, la lluvia para el pueblo wayuu de La Guajira.<br>
+        <a href="https://radionacional.co/cultura/tradiciones/juya-el-dios-de-la-lluvia-para-los-wayuu">Leer el artículo</a>
+      </div>
+      <div class="tarjeta">
+        🪨 <strong>Wikipedia, «38628 Huya» (en inglés)</strong><br>
+        Huya es un objeto helado del Cinturón de Kuiper, más allá de Neptuno. Lo
+        descubrieron en el año 2000 desde un observatorio de Venezuela, y su nombre se
+        aprobó en 2003. «Huya» es como se escribe Juyá en inglés.<br>
+        <a href="https://en.wikipedia.org/wiki/38628_Huya">Ver la ficha</a>
+      </div>
+      <div class="tarjeta">
+        🔭 <strong>Observatorio Astronómico Nacional (Bogotá)</strong><br>
+        La historia del observatorio que terminaron de construir en 1803. Su primer
+        director fue Francisco José de Caldas.<br>
+        <a href="https://sogeocol.edu.co/documentos/004_01_rese_hist_obser_astr.pdf">Ver la reseña histórica (PDF)</a>
+      </div>
+    </div>
+
+    <h3>🔬 Fuentes de información científica</h3>
+    <p>
+      Mi página es para <strong>Castellano</strong>, pero el tema es el Sistema Solar.
+      Por eso también usé fuentes de <strong>ciencias</strong>: me sirvieron para que lo
+      que escribí sea <strong>verdad</strong>. En Castellano aprendí a escribir el texto, y
+      en estas fuentes aprendí qué decir.
+    </p>
+    <div class="rejilla">
+      <div class="tarjeta">
+        🇨🇴 <strong>Estándares Básicos de Competencias en Ciencias Naturales (MEN, 2006)</strong><br>
+        Lo que se aprende en Ciencias Naturales en cuarto y quinto, por ejemplo
+        el tamaño, el movimiento y la posición de los planetas.<br>
+        <a href="https://www.mineducacion.gov.co/1621/articles-116042_archivo_pdf3.pdf">Ver el documento (PDF)</a>
+      </div>
+      <div class="tarjeta">
+        🇨🇴 <strong>Derechos Básicos de Aprendizaje (DBA) de Ciencias Naturales</strong><br>
+        Los publica Colombia Aprende. Los de astronomía (el día y la noche, y las fases
+        de la Luna) son de cuarto, y en mi página los repaso.<br>
+        <a href="https://colombiaaprende.edu.co/recurso-coleccion/derechos-basicos-de-aprendizaje-dba-ciencias-naturales">Ver en Colombia Aprende</a>
+      </div>
+      <div class="tarjeta">
+        🚀 <strong>NASA Space Place en español</strong><br>
+        La página de la NASA para niños. Usé estas partes:
+        <ul>
+          <li><a href="https://spaceplace.nasa.gov/planets-weight/sp/">Tu peso en otros planetas</a></li>
+          <li><a href="https://spaceplace.nasa.gov/moon-phases/sp/">Las fases de la Luna</a></li>
+          <li><a href="https://spaceplace.nasa.gov/seasons/sp/">¿Qué causa las estaciones?</a></li>
+        </ul>
+        <a href="https://spaceplace.nasa.gov/sp/">Página principal de Space Place</a>
+      </div>
+      <div class="tarjeta">
+        🔭 <strong>NASA: datos del Sistema Solar</strong><br>
+        De aquí revisé los tamaños, las distancias y otros números (en inglés):
+        <ul>
+          <li><a href="https://science.nasa.gov/solar-system/solar-system-facts/">Solar System Facts</a> (datos del Sistema Solar)</li>
+          <li><a href="https://science.nasa.gov/sun/">The Sun</a> (datos del Sol)</li>
+          <li><a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/">Planetary Fact Sheet</a> (la tabla de los planetas y la gravedad de la calculadora)</li>
+        </ul>
+      </div>
+      <div class="tarjeta">
+        🛰️ <strong>ESA Kids en español</strong><br>
+        La página para niños de la Agencia Espacial Europea.<br>
+        <a href="https://www.esa.int/kids/es/home">Ir a ESA Kids</a>
+      </div>
+    </div>
+
+    <div class="sabias">
+      <strong>💡 ¿Sabías que...?</strong> Los números de mi página están <strong>redondeados</strong>
+      para que sean fáciles de leer. Si quieres el número exacto, búscalo en la NASA.
+    </div>
+
+    <!-- 4. Videos -->
+    <h2>🎬 Videos</h2>
+    <p>Estos son todos los videos que puse en la página:</p>
+    <div class="tabla-contenedor">
+      <table>
+        <caption class="solo-lector">Lista de videos usados en el sitio, con su canal y enlace</caption>
+        <thead>
+          <tr>
+            <th scope="col">Video</th>
+            <th scope="col">Canal</th>
+            <th scope="col">Enlace</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>El Sistema Solar</td>
+            <td>Happy Learning Español</td>
+            <td><a href="https://www.youtube.com/watch?v=ZykXgSqet6A">Ver en YouTube<span class="solo-lector">: El Sistema Solar</span></a></td>
+          </tr>
+          <tr>
+            <td>El sol</td>
+            <td>Happy Learning Español</td>
+            <td><a href="https://www.youtube.com/watch?v=wANko2eM_uY">Ver en YouTube<span class="solo-lector">: El sol</span></a></td>
+          </tr>
+          <tr>
+            <td>Planetas terrestres</td>
+            <td>Smile and Learn - Español</td>
+            <td><a href="https://www.youtube.com/watch?v=yMca5uUX4qQ">Ver en YouTube<span class="solo-lector">: Planetas terrestres</span></a></td>
+          </tr>
+          <tr>
+            <td>Planetas gaseosos</td>
+            <td>Smile and Learn - Español</td>
+            <td><a href="https://www.youtube.com/watch?v=iOlyf8w3CjI">Ver en YouTube<span class="solo-lector">: Planetas gaseosos</span></a></td>
+          </tr>
+          <tr>
+            <td>Rotación y Traslación de la Tierra</td>
+            <td>Smile and Learn - Español</td>
+            <td><a href="https://www.youtube.com/watch?v=6kBlgCozIQc">Ver en YouTube<span class="solo-lector">: Rotación y Traslación de la Tierra</span></a></td>
+          </tr>
+          <tr>
+            <td>Paxi - El día, la noche y las estaciones</td>
+            <td>Agencia Espacial Europea (ESA)</td>
+            <td><a href="https://www.youtube.com/watch?v=soQ5MN0nuMg">Ver en YouTube<span class="solo-lector">: Paxi - El día, la noche y las estaciones</span></a></td>
+          </tr>
+          <tr>
+            <td>Fases de la Luna para niños</td>
+            <td>Smile and Learn - Español</td>
+            <td><a href="https://www.youtube.com/watch?v=GBr9wij6-zg">Ver en YouTube<span class="solo-lector">: Fases de la Luna para niños</span></a></td>
+          </tr>
+          <tr>
+            <td>Los Eclipses para niños</td>
+            <td>Smile and Learn - Español</td>
+            <td><a href="https://www.youtube.com/watch?v=LORLGccN93Y">Ver en YouTube<span class="solo-lector">: Los Eclipses para niños</span></a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      Los videos se ven con el <strong>reproductor oficial de YouTube</strong>. Yo no los
+      descargué ni los copié: <strong>pertenecen a sus autores</strong>. ¡Gracias por hacerlos!
+    </p>
+
+    <!-- 5. Imágenes -->
+    <h2>🎨 Imágenes</h2>
+    <div class="dibujos-css" role="img" aria-label="Tres planetas dibujados con código: uno azul y verde, uno rojo y uno amarillo con franjas">
+      <div class="planeta-bola" style="width:56px;height:56px;background:radial-gradient(circle at 35% 35%, #8fd3ff, #1e6fd9 60%, #2e8b57);"></div>
+      <div class="planeta-bola" style="width:40px;height:40px;background:radial-gradient(circle at 35% 35%, #ffb38a, #c1440e);"></div>
+      <div class="planeta-bola" style="width:80px;height:80px;background:repeating-linear-gradient(170deg, #e3c08d 0 10px, #c9955c 10px 18px);"></div>
+    </div>
+    <p>
+      Todos los dibujos de planetas los hice con <strong>CSS</strong> (código), así que
+      <strong>no copié imágenes de nadie</strong>. Los otros dibujitos son emojis. 😄
+    </p>
+
+    <!-- 6. Cómo programé la página -->
+    <h2>🛠️ Cómo programé la página</h2>
+    <div class="rejilla">
+      <div class="tarjeta">🧱 <strong>HTML</strong><br>Es la <strong>estructura</strong>: los títulos, los párrafos, las tablas y los enlaces.</div>
+      <div class="tarjeta">🎨 <strong>CSS</strong><br>Es el <strong>diseño</strong>: los colores, las letras y los dibujos de los planetas.</div>
+      <div class="tarjeta">⚙️ <strong>JavaScript</strong><br>Es lo que hace que las cosas se muevan: la <strong>calculadora</strong> de peso, el <strong>comparador</strong> y el <strong>quiz</strong>.</div>
+      <div class="tarjeta">🌐 <strong>GitHub Pages</strong><br>Es el lugar donde está <strong>publicada gratis</strong> la página para que todos la vean.</div>
+    </div>
+    <p><strong>Ayuda técnica:</strong> mi papá. 👨‍💻</p>
+
+    <!-- 7. Herramientas de ayuda -->
+    <h2>🤖 Herramientas de ayuda</h2>
+    <p>
+      Voy a ser honesto: usamos un <strong>asistente de inteligencia artificial</strong>
+      llamado <strong>Claude</strong> para ayudarnos a organizar las ideas y a programar.
+      Pero la inteligencia artificial también se puede equivocar; por eso,
+      <strong>revisamos la información con las fuentes de arriba</strong>.
+    </p>
+    <div class="mito">
+      <strong>❌ Idea equivocada:</strong> «Si lo dice la computadora, seguro es verdad».<br>
+      <strong>✅ Lo correcto:</strong> siempre hay que comparar con fuentes confiables,
+      como la NASA o el Ministerio de Educación.
+    </div>
+
+    <!-- 8. Privacidad -->
+    <h2>🔒 Privacidad</h2>
+    <p>
+      Esta página <strong>no recoge datos</strong> de quien la visita: no pide tu nombre,
+      no tiene registro y no manda lo que escribes a ningún lado. Cuando calculas tu peso
+      o juegas el quiz, todo pasa <strong>solo en tu dispositivo</strong>. El diseño que
+      escojas se guarda solo en tu navegador, para recordarlo la próxima vez.
+    </p>
+    <p>
+      Los videos vienen de YouTube (en su modo de privacidad mejorada), y YouTube tiene
+      sus propias reglas cuando le das ▶️ a un video.
+    </p>
+
+    <nav class="navegacion-paginas" aria-label="Páginas siguiente y anterior">
+      <a href="juega.html">← Anterior: ¡Juega!</a>
+      <a href="index.html">Volver al inicio 🏠</a>
+    </nav>
+  </main>
+
+  <!-- ===== PIE DE PÁGINA (es igual en todas las páginas) ===== -->
+  <footer>
+    <p>Página hecha por <span class="autor">Eduard Reina</span> · Grado 5° · Castellano · 2026</p>
+    <p><a href="creditos.html">Glosario, fuentes y créditos</a></p>
+  </footer>
+
+  <script src="js/menu.js"></script>
+</body>
+</html>
